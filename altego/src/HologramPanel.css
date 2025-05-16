@@ -1,0 +1,74 @@
+.hologram-wrapper {
+  position: relative;
+  width: 300px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Button mit unterem Glow */
+.hologram-toggle {
+  position: relative;
+  background: #111;
+  color: #aef;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hologram-toggle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(150, 220, 255, 1),
+    rgba(150, 220, 255, 0.5),
+    transparent
+  );
+  box-shadow: 0 0 8px rgba(150, 220, 255, 0.8);
+  pointer-events: none;
+}
+
+/* Das Panel */
+.hologram-bg {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+  position: relative;
+  background-color: rgba(100, 160, 200, 0.3);
+  background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(100, 160, 200, 0.4) 0px,
+      rgba(100, 160, 200, 0.4) 2px,
+      transparent 8px,
+      transparent 10px
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0px,
+      rgba(0, 0, 0, 0.5) 10px,
+      rgba(0, 0, 0, 0.5) calc(100% - 10px),
+      rgba(0, 0, 0, 1) 100%
+    );
+  background-blend-mode: multiply;
+  animation: hologram-scroll 30s linear infinite;
+}
+
+/* beim Öffnen wächst der Bereich */
+.hologram-bg.open {
+  height: 200px;
+}
+
+/* Linienanimation */
+@keyframes hologram-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100px;
+  }
+}
