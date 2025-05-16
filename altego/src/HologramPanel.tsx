@@ -1,9 +1,16 @@
-// HologramPanel.tsx
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import "./HologramPanel.css";
 import ChevronIcon from "./ChevronIcon";
 
-export default function HologramPanel() {
+interface HologramPanelProps {
+  title: string;
+  children: ReactNode;
+}
+
+export default function HologramPanel({
+  title,
+  children,
+}: Readonly<HologramPanelProps>) {
   const [active, setActive] = useState(false);
 
   return (
@@ -13,11 +20,11 @@ export default function HologramPanel() {
         onClick={() => setActive((a) => !a)}
       >
         <ChevronIcon open={active} />
-        Toggle Hologram
+        {title}
       </button>
 
       <div className={`hologram-bg ${active ? "open" : ""}`}>
-        <p>Holographische Nachricht</p>
+        <div style={{ padding: "8px" }}>{children}</div>
       </div>
     </div>
   );
