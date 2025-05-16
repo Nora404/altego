@@ -73,11 +73,6 @@
   animation: hologram-scroll 30s linear infinite;
 }
 
-/* beim Öffnen wächst der Bereich */
-.hologram-bg.open {
-  height: 200px;
-}
-
 /* Linienanimation */
 @keyframes hologram-scroll {
   from {

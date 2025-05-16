@@ -5,11 +5,13 @@ import ChevronIcon from "./ChevronIcon";
 interface HologramPanelProps {
   title: string;
   children: ReactNode;
+  panelHeight?: number;
 }
 
 export default function HologramPanel({
   title,
   children,
+  panelHeight = 200,
 }: Readonly<HologramPanelProps>) {
   const [active, setActive] = useState(false);
 
@@ -23,8 +25,15 @@ export default function HologramPanel({
         {title}
       </button>
 
-      <div className={`hologram-bg ${active ? "open" : ""}`}>
-        <div style={{ padding: "8px" }}>{children}</div>
+      <div
+        className={`hologram-bg ${active ? "open" : ""}`}
+        style={{ height: active ? `${panelHeight}px` : "0px" }}
+      >
+        <div
+          style={{ padding: "15px", paddingLeft: "30px", textAlign: "left" }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );
