@@ -15,7 +15,7 @@ export default function HologramPanel() {
       </button>
 
       <div className={`hologram-bg ${active ? "open" : ""}`}>
-        <p>Holographische Nachricht aktiviert.</p>
+        <p>Holographische Nachricht</p>
       </div>
     </div>
   );
