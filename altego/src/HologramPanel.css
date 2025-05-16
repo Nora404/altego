@@ -7,14 +7,28 @@
 
 /* Button mit unterem Glow */
 .hologram-toggle {
-  position: relative;
-  background: #111;
+  /* ... bleibt alles wie gehabt, außer background ersetzt ... */
+  background: linear-gradient(
+    to bottom,
+    #15191b 0%,
+    #323c42 30%,
+    #465661 50%,
+    #1b2125 70%,
+    #0f1316 100%
+  );
+  border: 1px inset #0a0a0a;
+  box-shadow: inset 0 1px 0 rgba(180, 180, 180, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.6);
   color: #aef;
-  border: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5rem;
   padding: 1rem 2rem;
-  cursor: pointer;
   font-size: 1rem;
+  cursor: pointer;
   width: 100%;
+  border-top-right-radius: 30px;
 }
 
 .hologram-toggle::after {
@@ -72,4 +86,15 @@
   to {
     background-position: 0 100px;
   }
+}
+
+.grooves {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
