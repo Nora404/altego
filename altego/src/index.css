@@ -11,53 +11,62 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
 }
 
-.hologram-bg {
-  position: relative;
-  background-color: rgba(100, 160, 200, 0.3);
-  background-image: repeating-linear-gradient(
-      to bottom,
-      rgba(100, 160, 200, 0.4) 0px,
-      rgba(100, 160, 200, 0.4) 2px,
-      transparent 8px,
-      transparent 10px
-    ),
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.5) 10px,
-      rgba(0, 0, 0, 0.5) calc(100% - 10px),
-      rgba(0, 0, 0, 1) 100%
-    );
-  background-blend-mode: multiply; /* <<< NEU */
-  animation: hologram-scroll 30s linear infinite;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.hologram-bg::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+hr {
   width: 100%;
-  height: 3px; /* Höhe der Lichtlinie */
+  height: 3px;
+  margin: 0;
+  box-shadow: 0 0 8px rgba(150, 220, 255, 0.8);
   background: linear-gradient(
-    to bottom,
+    to top,
     rgba(150, 220, 255, 1),
     rgba(150, 220, 255, 0.5),
     transparent
   );
-  box-shadow: 0 0 8px rgba(150, 220, 255, 0.8);
-  pointer-events: none;
-  z-index: 1;
+  border: none;
 }
 
-/* Animation für den Fluss nach unten */
-@keyframes hologram-scroll {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 0 100px; /* ändert vertikale Position */
-  }
+.flex-col {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.metall {
+  background: linear-gradient(
+    to bottom,
+    #15191b 0%,
+    #323c42 30%,
+    #465661 50%,
+    #1b2125 70%,
+    #0f1316 100%
+  );
+  border: 1px solid #0a0a0a;
+  box-shadow: inset 0 1px 0 rgba(180, 180, 180, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0, 0, 0, 0.6);
+  color: #aef;
+}
+
+.pr-1 {
+  padding-right: 5px;
+}
+
+.pr-2 {
+  padding-right: 10px;
 }

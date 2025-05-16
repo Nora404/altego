@@ -8,6 +8,7 @@ interface HologramPanelProps {
   panelHeight?: number;
   panelWidth?: number | string;
   roundedTopRight?: boolean;
+  className?: string;
 }
 
 export default function HologramPanel({
@@ -16,12 +17,13 @@ export default function HologramPanel({
   panelHeight = 200,
   panelWidth = 150,
   roundedTopRight = false,
+  className = "",
 }: Readonly<HologramPanelProps>) {
   const [active, setActive] = useState(false);
 
   return (
     <div
-      className="hologram-wrapper"
+      className={`hologram-wrapper ${className}`}
       style={{
         width: typeof panelWidth === "number" ? `${panelWidth}px` : panelWidth,
       }}
@@ -41,6 +43,7 @@ export default function HologramPanel({
         className={`hologram-bg ${active ? "open" : ""}`}
         style={{ height: active ? `${panelHeight}px` : "0px" }}
       >
+        <hr />
         <div
           style={{ padding: "15px", paddingLeft: "30px", textAlign: "left" }}
         >
