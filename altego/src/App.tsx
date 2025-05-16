@@ -7,22 +7,22 @@ function App() {
       className="flex-row metall"
       style={{ height: "40px", margin: 0, width: "100%" }}
     >
-      <HologramPanel title="News" panelHeight={100} panelWidth={180}>
+      <HologramPanel title="News" panelWidth={180}>
         Holo Text
       </HologramPanel>
-      <HologramPanel title="Spiele" panelHeight={100} panelWidth={180}>
+      <HologramPanel title="Spiele" panelWidth={180}>
         Holo Text
       </HologramPanel>
-      <HologramPanel title="Community" panelHeight={100} panelWidth={180}>
+      <HologramPanel title="Community" panelWidth={180}>
         Holo Text
       </HologramPanel>
-      <HologramPanel title="Downloads" panelHeight={100} panelWidth={180}>
+      <HologramPanel title="Downloads" panelWidth={180}>
         Holo Text
       </HologramPanel>
-      <HologramPanel title="Hilfe" panelHeight={100} panelWidth={180}>
+      <HologramPanel title="Hilfe" panelWidth={180}>
         Holo Text
       </HologramPanel>
-      <HologramPanel title="Shop" panelHeight={100} panelWidth={180}>
+      <HologramPanel title="Shop" panelWidth={180}>
         Holo Text
       </HologramPanel>
     </div>

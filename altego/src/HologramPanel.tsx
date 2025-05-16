@@ -1,11 +1,11 @@
-import { useState, type ReactNode } from "react";
+// HologramPanel.tsx
+import { useState, useRef, useEffect, type ReactNode } from "react";
 import "./HologramPanel.css";
 import ChevronIcon from "./ChevronIcon";
 
 interface HologramPanelProps {
   title: string;
   children: ReactNode;
-  panelHeight?: number;
   panelWidth?: number | string;
   roundedTopRight?: boolean;
   className?: string;
@@ -14,12 +14,20 @@ interface HologramPanelProps {
 export default function HologramPanel({
   title,
   children,
-  panelHeight = 200,
   panelWidth = 150,
   roundedTopRight = false,
   className = "",
 }: Readonly<HologramPanelProps>) {
-  const [active, setActive] = useState(false);
+  const [open, setOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState(0);
+
+  useEffect(() => {
+    const el = contentRef.current;
+    if (!el) return;
+
+    setMaxHeight(open ? el.scrollHeight : 0);
+  }, [open, children]);
 
   return (
     <div
@@ -29,24 +37,24 @@ export default function HologramPanel({
       }}
     >
       <button
-        className={`hologram-toggle ${active ? "active" : ""}`}
-        onClick={() => setActive((a) => !a)}
-        style={{
-          borderTopRightRadius: roundedTopRight ? "30px" : "0px",
-        }}
+        className="hologram-toggle"
+        onClick={() => setOpen((o) => !o)}
+        style={{ borderTopRightRadius: roundedTopRight ? "30px" : "0" }}
       >
-        <ChevronIcon open={active} />
+        <ChevronIcon open={open} />
         {title}
       </button>
 
       <div
-        className={`hologram-bg ${active ? "open" : ""}`}
-        style={{ height: active ? `${panelHeight}px` : "0px" }}
+        ref={contentRef}
+        className="hologram-bg"
+        style={{
+          maxHeight,
+          transition: "max-height 0.35s ease",
+        }}
       >
         <hr />
-        <div
-          style={{ padding: "15px", paddingLeft: "30px", textAlign: "left" }}
-        >
+        <div style={{ padding: "15px 15px 15px 30px", textAlign: "left" }}>
           {children}
         </div>
       </div>
