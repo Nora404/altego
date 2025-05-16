@@ -39,28 +39,35 @@
 /* Das Panel */
 .hologram-bg {
   position: absolute;
+  color: #ffffff;
   top: 100%;
   left: 0;
   width: 100%;
   z-index: 10;
   overflow: hidden;
-  background-color: rgba(123, 195, 243, 0.3);
+  background-color: rgba(123, 195, 243, 0.2);
   background-image: repeating-linear-gradient(
-      to bottom,
-      rgba(123, 195, 243, 0.4) 0px,
-      rgba(123, 195, 243, 0.4) 2px,
-      transparent 8px,
-      transparent 10px
-    ),
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 1) 0px,
-      rgba(0, 0, 0, 0.5) 10px,
-      rgba(0, 0, 0, 0.5) calc(100% - 10px),
-      rgba(0, 0, 0, 1) 100%
-    );
-  background-blend-mode: multiply;
+    to bottom,
+    rgba(123, 195, 243, 0.3) 0 2px,
+    transparent 8px 10px
+  );
   animation: hologram-scroll 30s linear infinite;
+
+  /* neue weiche Seitenmaskierung */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    /*   ↖  linker Fade   */ #000 calc(100% - 10px),
+    /* sichtbarer Mittelteil */ transparent 100% /*   ↗  rechter Fade  */
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    #000 calc(100% - 10px),
+    transparent 100%
+  );
 }
 
 /* Linienanimation */
