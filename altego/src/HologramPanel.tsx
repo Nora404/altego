@@ -8,6 +8,7 @@ interface HologramPanelProps {
   children: ReactNode;
   panelWidth?: number | string;
   roundedTopRight?: boolean;
+  chevron?: boolean;
   className?: string;
 }
 
@@ -16,6 +17,7 @@ export default function HologramPanel({
   children,
   panelWidth = 150,
   roundedTopRight = false,
+  chevron = true,
   className = "",
 }: Readonly<HologramPanelProps>) {
   const [open, setOpen] = useState(false);
@@ -41,7 +43,7 @@ export default function HologramPanel({
         onClick={() => setOpen((o) => !o)}
         style={{ borderTopRightRadius: roundedTopRight ? "30px" : "0" }}
       >
-        <ChevronIcon open={open} />
+        {chevron && <ChevronIcon open={open} />}
         {title}
       </button>
 
@@ -54,9 +56,7 @@ export default function HologramPanel({
         }}
       >
         <hr />
-        <div style={{ padding: "15px 15px 15px 30px", textAlign: "left" }}>
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   );
