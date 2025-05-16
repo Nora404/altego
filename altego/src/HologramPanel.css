@@ -7,7 +7,6 @@
 
 /* Button mit unterem Glow */
 .hologram-toggle {
-  /* ... bleibt alles wie gehabt, außer background ersetzt ... */
   background: linear-gradient(
     to bottom,
     #15191b 0%,
@@ -28,6 +27,7 @@
   font-size: 1rem;
   cursor: pointer;
   width: 100%;
+  height: 40px;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
