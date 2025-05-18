@@ -15,15 +15,17 @@ function App() {
       <Header />
       <Menu data={menuData} />
 
-      <Suspense fallback={<p>lädt …</p>}>
-        <Routes>
-          <Route element={<Content />}>
-            {routes.map(({ path, component: Page }) => (
-              <Route key={path} path={path} element={<Page />} />
-            ))}
-          </Route>
-        </Routes>
-      </Suspense>
+      <div id="page">
+        <Suspense fallback={<p>lädt …</p>}>
+          <Routes>
+            <Route element={<Content />}>
+              {routes.map(({ path, component: Page }) => (
+                <Route key={path} path={path} element={<Page />} />
+              ))}
+            </Route>
+          </Routes>
+        </Suspense>
+      </div>
 
       <Footer />
     </BrowserRouter>

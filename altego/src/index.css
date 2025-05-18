@@ -13,6 +13,7 @@
 
   --header-h: 150px;
   --footer-h: 40px; 
+  --menu-h:   40px; 
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 
   padding-top: var(--header-h);
   padding-bottom: var(--footer-h);
-  overflow-y: auto; 
+  overflow: hidden;
 }
 
 hr {
@@ -38,6 +39,18 @@ hr {
   );
   border: none;
 }
+
+#page {
+  position: fixed;
+  top: calc(var(--header-h) + var(--menu-h));
+  bottom: var(--footer-h);
+  left: 0;
+  right: 0;
+
+  overflow-y: auto;              /* hier erscheint der Scrollbalken */
+  overscroll-behavior: contain;  /* optional, verhindert Body-Bounce auf Mobile */
+}
+
 
 .glass {
   background-color: rgba(218, 198, 146, 0.1); 
