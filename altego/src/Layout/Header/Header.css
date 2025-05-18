@@ -1,6 +1,6 @@
 .custom-header {
   position: relative;
-  height: 150px;
+  height: var(--header-h);
   width: 100%;
   overflow: hidden;
 }
@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: flex-end;
   padding-right: 10px;
-  color: white;
+  color: orange;
 }
 
 .bottom-left-deco {

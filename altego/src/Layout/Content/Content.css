@@ -4,9 +4,9 @@
   grid-template-columns: 16px 1fr 16px;
   grid-template-rows: 16px 1fr 16px;
   width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  min-height: calc(100vh - 300px);
+  max-width: 1100px;
+  /* min-height: calc(100vh - var(--footer-h)); */
+  margin: 20px auto ;
 }
 
 .content {

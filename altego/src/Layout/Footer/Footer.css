@@ -3,39 +3,37 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px; /* Footer-Höhe */
+  height: var(--footer-h);
   background-color: black;
-  color: white;
+  color: orange;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* hoch genug, aber unter Modals etc. */
+  margin-top: 15px;
+  /* z-index: 1000;  */
 }
 
 
 .left-deco {
   position: absolute;
-  bottom: 60px;
+  bottom: var(--footer-h);
   left: 0;
   width: 250px;
-  height: 35px;
+  height: 30px;
   background-color: black;
   clip-path: polygon(0 0, 230px 0, 100% 100%, 0 100%);
-  z-index: 1001;
 }
 
 .right-deco {
   position: absolute;
-  bottom: 60px;
+  bottom: var(--footer-h);
   right: 0;
   width: 250px;
-  height: 35px;
+  height: 30px;
   background-color: black;
   clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 1001;
     display: flex;
     align-items: last baseline;
     justify-content: flex-end;
     gap: 5px;
-    
 }
