@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
   line-height: 1.7;
   font-weight: 400;
 
@@ -31,6 +31,12 @@ hr {
     transparent
   );
   border: none;
+}
+
+.glass {
+  background-color: rgba(218, 198, 146, 0.1); 
+  backdrop-filter: blur(10px);              
+  -webkit-backdrop-filter: blur(10px);       
 }
 
 .blue-bg {
@@ -76,4 +82,36 @@ hr {
 
 .pr-2 {
   padding-right: 10px;
+}
+
+
+.bl-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px; /* Höhe des oberen "Randes" */
+  width: 100%;
+  background: linear-gradient(to left, #A6852E, transparent);
+  pointer-events: none;
+}
+
+.bl-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px; /* Höhe des unteren "Randes" */
+  width: 100%;
+  background: linear-gradient(to right, #A6852E, transparent);
+  pointer-events: none;
+}
+
+.outlined-text {
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
