@@ -43,7 +43,10 @@ hr {
 }
 
 .blue-bg {
-  padding: 0 10px 0 10px;
+  display: block;       
+  width: 100%;          
+  padding: 4px 10px;    
+  box-sizing: border-box;
 }
 .blue-bg:hover {
   background: rgba(150, 220, 255, 0.5);

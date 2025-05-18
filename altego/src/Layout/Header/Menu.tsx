@@ -1,11 +1,11 @@
 // Menu.tsx  – NEUE KOMPONENTE  |  nur relevante Abschnitte
 import React from 'react';
 import HologramPanel from './HologramPanel';
-
-type MenuItem = { title: string; entries: string[] };
+import { NavLink } from 'react-router-dom';
+import type { MenuItem } from '../../Data/MenuData';
 
 interface MenuProps {
-    data: MenuItem[];
+    data: readonly MenuItem[];
 }
 
 const Menu: React.FC<MenuProps> = ({ data }) => (
@@ -17,10 +17,10 @@ const Menu: React.FC<MenuProps> = ({ data }) => (
                 panelWidth={180}
             >
                 <div style={{ padding: 10, textAlign: 'left' }}>
-                    {entries.map((e) => (
-                        <div key={e} className="blue-bg outlined-text">
-                            {e}
-                        </div>
+                    {entries.map(({ label, to }) => (
+                        <NavLink key={to} to={to} className="blue-bg outlined-text">
+                            {label}<br />
+                        </NavLink>
                     ))}
                 </div>
             </HologramPanel>

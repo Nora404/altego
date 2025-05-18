@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import "./Content.css"
 
 const Content = () => {
@@ -8,28 +9,7 @@ const Content = () => {
             <div className="corner top-right" />
             <div className="edge left" />
             <div className="content glass">
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
-                <p>Hier steht der Inhalt</p>
+                <Outlet />
             </div>
             <div className="edge right" />
             <div className="corner bottom-left" />
