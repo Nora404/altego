@@ -54,6 +54,7 @@
   position: absolute;
   height: 100%;
   z-index: 3;
+  top: 0;
   margin-left: 10px;
 }
 

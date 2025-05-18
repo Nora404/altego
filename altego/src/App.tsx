@@ -1,4 +1,5 @@
 import "./App.css";
+import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
 import HologramPanel from "./HologramPanel";
@@ -52,6 +53,8 @@ function App() {
           </div>
         </HologramPanel>
       </div>
+
+      <Content />
 
       <Footer />
     </>
