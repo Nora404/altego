@@ -1,0 +1,36 @@
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Footer-Höhe */
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* hoch genug, aber unter Modals etc. */
+}
+
+
+.left-deco {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 250px;
+  height: 35px;
+  background-color: black;
+  clip-path: polygon(0 0, 230px 0, 100% 100%, 0 100%);
+  z-index: 1001;
+}
+
+.right-deco {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 250px;
+  height: 35px;
+  background-color: black;
+  clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 1001;
+}
