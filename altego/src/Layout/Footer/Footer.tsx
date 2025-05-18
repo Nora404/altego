@@ -3,9 +3,6 @@ import "./Footer.css"
 const Footer = () => {
     return (
         <>
-            {/* Platzhalter */}
-            <div style={{ height: "60px" }} />
-
             <div className="left-deco" />
             <div className="right-deco">
                 <img src="assets/facebookklon.png" alt="icon" style={{ width: "24px", height: "24px" }} />

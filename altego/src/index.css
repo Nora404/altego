@@ -19,7 +19,10 @@ body {
   background: url("/assets/background.jpg") center/cover no-repeat fixed;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+
+  padding-top: var(--header-h);
+  padding-bottom: var(--footer-h);
+  overflow-y: auto; 
 }
 
 hr {

@@ -15,7 +15,7 @@
 
 
 .left-deco {
-  position: absolute;
+  position: fixed;
   bottom: var(--footer-h);
   left: 0;
   width: 250px;
@@ -25,7 +25,7 @@
 }
 
 .right-deco {
-  position: absolute;
+  position: fixed;
   bottom: var(--footer-h);
   right: 0;
   width: 250px;

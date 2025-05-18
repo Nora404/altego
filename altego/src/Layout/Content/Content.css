@@ -5,8 +5,8 @@
   grid-template-rows: 16px 1fr 16px;
   width: 100%;
   max-width: 1100px;
-  /* min-height: calc(100vh - var(--footer-h)); */
-  margin: 20px auto ;
+  min-height: calc(100vh - var(--header-h) - var(--footer-h));
+  margin: 60px auto ;
 }
 
 .content {

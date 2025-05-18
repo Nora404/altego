@@ -1,0 +1,5 @@
+.menu {
+  position: fixed;
+  top: var(--header-h);
+    z-index: 1000; 
+}

@@ -1,8 +1,10 @@
 .custom-header {
-  position: relative;
+  position: fixed;
   height: var(--header-h);
   width: 100%;
   overflow: hidden;
+  z-index: 1000; 
+  top: 0;
 }
 
 .top-bar,
