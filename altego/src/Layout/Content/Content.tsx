@@ -8,7 +8,7 @@ const Content = () => {
             <div className="edge top" />
             <div className="corner top-right" />
             <div className="edge left" />
-            <div className="content glass">
+            <div className="content glass-dark">
                 <Outlet />
             </div>
             <div className="edge right" />
