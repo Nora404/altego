@@ -10,6 +10,7 @@ const Header = () => {
             </div>
             <div className="content">
                 <img src="assets/x4-logo_200px.png" className="logo" />
+                <img src="assets/text.png" className="text" />
                 <img src="assets/Egosoft.gif" className="logo2" />
             </div>
             <div className="bottom-left-deco" />

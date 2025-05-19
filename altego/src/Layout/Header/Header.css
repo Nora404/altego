@@ -68,3 +68,10 @@
   bottom: 25px;
   margin-right: 10px;
 }
+
+.text {
+    position: absolute;
+  height: 40%;
+  top: 50px;
+  left: 280px;
+}
