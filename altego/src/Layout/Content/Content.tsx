@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import "./Content.css"
-import { Plattform } from "./Plattform";
 
 const Content = () => {
     return (

@@ -37,7 +37,14 @@ function App() {
         </div>
 
         <div className="article right">
-          <Plattform title="Test">Hallo</Plattform>
+          <Plattform title="Games Showcase">
+            <div className="flex-row-center">
+              <img src="/assets/X_Rebirth.jpg" alt="screenshot" className="ad-img"
+                style={{ margin: "5px", height: "100%" }} />
+              <img src="/assets/X4_Foundations.jpg" alt="screenshot" className="ad-img"
+                style={{ margin: "5px", height: "100%" }} />
+            </div>
+          </Plattform>
         </div>
       </div>
 
