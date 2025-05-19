@@ -22,8 +22,16 @@ function App() {
           <Plattform title="Buy X-Series online">
             <img src="/assets/steam-logo.png" alt="screenshot" className="ad-img-1" />
           </Plattform>
-          <Plattform title="Neuster Screenshot">
-            <img src="/assets/x4_screen_205.jpg" alt="screenshot" className="ad-img-1" />
+
+
+          <Plattform title="Games Showcase">
+            <div className="flex-row-center banner-parent">
+              <Banner text="Buy Now" angle={-10} />
+              <img src="/assets/X_Rebirth.jpg" alt="screenshot" className="ad-img-2"
+                style={{ margin: "5px", height: "100%" }} />
+              <img src="/assets/X4_Foundations.jpg" alt="screenshot" className="ad-img-2"
+                style={{ margin: "5px", height: "100%" }} />
+            </div>
           </Plattform>
         </div>
 
@@ -40,14 +48,18 @@ function App() {
         </div>
 
         <div className="article right">
-          <Plattform title="Games Showcase">
-            <div className="flex-row-center banner-parent">
-              <Banner text="Buy Now" angle={-10} />
-              <img src="/assets/X_Rebirth.jpg" alt="screenshot" className="ad-img-2"
-                style={{ margin: "5px", height: "100%" }} />
-              <img src="/assets/X4_Foundations.jpg" alt="screenshot" className="ad-img-2"
-                style={{ margin: "5px", height: "100%" }} />
-            </div>
+          <Plattform title="Logindata">
+            Nora404<br />
+            Edit Profile
+          </Plattform>
+
+          <Plattform title="Community">
+            Users: 366141<br />
+            Logged in: 12
+          </Plattform>
+
+          <Plattform title="Neuster Screenshot">
+            <img src="/assets/x4_screen_205.jpg" alt="screenshot" className="ad-img-1" />
           </Plattform>
         </div>
       </div>
