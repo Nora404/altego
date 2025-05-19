@@ -19,7 +19,9 @@ function App() {
 
       <div className="layout">        {/* ⬅︎ neu */}
         <div className="article left">
-          <Plattform title="Test">Hallo</Plattform>
+          <Plattform title="Buy X-Series online">
+            <img src="/assets/steam-logo.png" alt="screenshot" className="ad-img-1" />
+          </Plattform>
           <Plattform title="Neuster Screenshot">
             <img src="/assets/x4_screen_205.jpg" alt="screenshot" className="ad-img-1" />
           </Plattform>
