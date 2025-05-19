@@ -189,3 +189,7 @@ hr {
 
 
 
+.banner-parent {
+  position: relative;
+  overflow: hidden;
+}

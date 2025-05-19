@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import { routes } from "./routing";
 import { menuData } from "./Data/MenuData";
 import { Plattform } from "./Layout/Content/Plattform";
+import { Banner } from "./Layout/Content/Banner";
 
 function App() {
 
@@ -38,7 +39,8 @@ function App() {
 
         <div className="article right">
           <Plattform title="Games Showcase">
-            <div className="flex-row-center">
+            <div className="flex-row-center banner-parent">
+              <Banner text="Buy Now" angle={-10} />
               <img src="/assets/X_Rebirth.jpg" alt="screenshot" className="ad-img"
                 style={{ margin: "5px", height: "100%" }} />
               <img src="/assets/X4_Foundations.jpg" alt="screenshot" className="ad-img"

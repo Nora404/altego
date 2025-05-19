@@ -1,0 +1,23 @@
+/* Basis-Style für den schrägen Banner */
+.buy-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  /* genug Länge, damit die Diagonale den Container komplett schneidet   */
+  width: 140%;
+  padding: 0.35em 0;
+
+  background: rgba(220, 0, 0, 0.55);
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  pointer-events: none;              /* klickt nicht den Content zu */
+
+  transform-origin: left bottom;
+  transform: rotate(var(--angle)) translateY(50%);
+}
