@@ -16,8 +16,12 @@
   letter-spacing: 1px;
 
   box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
-  pointer-events: none;              /* klickt nicht den Content zu */
 
   transform-origin: left bottom;
   transform: rotate(var(--angle)) translateY(50%);
+}
+
+.buy-banner:hover {
+  background: rgba(255, 0, 0, 0.75);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
