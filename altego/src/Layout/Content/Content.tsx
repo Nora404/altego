@@ -6,7 +6,10 @@ const Content = () => {
     return (
         <div className="flex-row-center w-full">
 
-            <Plattform />
+            <Plattform title="Neuster Screenshot">
+                <img src="/assets/x4_screen_205.jpg" alt="screenshot" className="ad-img" />
+            </Plattform>
+
             <div className="content-grid">
                 <div className="corner top-left" />
                 <div className="edge-top" />
@@ -20,7 +23,7 @@ const Content = () => {
                 <div className="edge-bottom" />
                 <div className="corner bottom-right" />
             </div>
-            <Plattform />
+            <Plattform>Hallo</Plattform>
         </div>
     );
 };
