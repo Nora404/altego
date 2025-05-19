@@ -21,7 +21,7 @@ function App() {
         <div className="article left">
           <Plattform title="Test">Hallo</Plattform>
           <Plattform title="Neuster Screenshot">
-            <img src="/assets/x4_screen_205.jpg" alt="screenshot" className="ad-img" />
+            <img src="/assets/x4_screen_205.jpg" alt="screenshot" className="ad-img-1" />
           </Plattform>
         </div>
 
@@ -41,9 +41,9 @@ function App() {
           <Plattform title="Games Showcase">
             <div className="flex-row-center banner-parent">
               <Banner text="Buy Now" angle={-10} />
-              <img src="/assets/X_Rebirth.jpg" alt="screenshot" className="ad-img"
+              <img src="/assets/X_Rebirth.jpg" alt="screenshot" className="ad-img-2"
                 style={{ margin: "5px", height: "100%" }} />
-              <img src="/assets/X4_Foundations.jpg" alt="screenshot" className="ad-img"
+              <img src="/assets/X4_Foundations.jpg" alt="screenshot" className="ad-img-2"
                 style={{ margin: "5px", height: "100%" }} />
             </div>
           </Plattform>
