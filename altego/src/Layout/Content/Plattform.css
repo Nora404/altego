@@ -1,5 +1,12 @@
+.platform-container {
+  width: 100%;
+  max-width: 90%;   /* verhindert Überbreite */
+  margin: 20px 0;
+}
+
 .platform {
-  width: 50%;
+  width: 100%;
+  max-width: 300px;
   background: radial-gradient(
     ellipse,
     rgba(67, 156, 227, 1.0) 0%,
@@ -22,7 +29,8 @@
 }
 
 .plattform-ad {
-  width: 50%;
+  width: 100%;
+  max-width: 300px;
   min-height: 100px;
   color: #ffffff;
     text-shadow:

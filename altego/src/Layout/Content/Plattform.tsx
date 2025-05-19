@@ -8,7 +8,7 @@ type PlattformProps = {
 
 export const Plattform = ({ children, title = "" }: PlattformProps) => {
     return (
-        <div className="flex-col-center float-y-animation" style={{ width: "100%" }}>
+        <div className="platform-container flex-col-center float-y-animation">
             <div className="plattform-ad hologram-background">
                 <h3>{title}</h3>
                 {children}
@@ -19,3 +19,4 @@ export const Plattform = ({ children, title = "" }: PlattformProps) => {
         </div>
     );
 };
+

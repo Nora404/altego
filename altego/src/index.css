@@ -21,8 +21,8 @@ body {
   margin: 0;
   padding: 0;
 
-  padding-top: var(--header-h);
-  padding-bottom: var(--footer-h);
+  padding-top: calc(var(--header-h) + var(--menu-h));  
+  padding-bottom: var(--footer-h);  
   overflow: hidden;
 }
 
@@ -40,15 +40,34 @@ hr {
   border: none;
 }
 
-#page {
-  position: fixed;
-  top: calc(var(--header-h) + var(--menu-h));
-  bottom: var(--footer-h);
-  left: 0;
-  right: 0;
+.layout {
+  display: grid;
+  grid-template-areas:
+    "left  content  right";
+  grid-template-columns:
+    minmax(220px, 1fr)
+    minmax(0, 1100px)
+    minmax(220px, 1fr);    
+    column-gap: 40px;           /* Abstand zwischen den Spalten */
+  height: calc(100vh - var(--header-h) - var(--menu-h) - var(--footer-h));
+  overflow: hidden;                /* verhindert Body-Scroll */
+}
 
-  overflow-y: auto;              /* hier erscheint der Scrollbalken */
-  overscroll-behavior: contain;  /* optional, verhindert Body-Bounce auf Mobile */
+#page {
+  grid-area: content;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.article.left   { grid-area: left;  }
+.article.right  { grid-area: right; }
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  min-width: 0; 
 }
 
 
