@@ -88,6 +88,20 @@ hr {
   flex-direction: column;
 }
 
+.flex-col-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .flex-row {
   display: flex;
   justify-content: flex-start;
@@ -119,6 +133,10 @@ hr {
 }
 
 
+.w-full {
+  width: 100%;
+}
+
 .bl-top::before {
   content: "";
   position: absolute;
@@ -149,3 +167,6 @@ hr {
     -1px  1px 0 black,
      1px  1px 0 black;
 }
+
+
+
