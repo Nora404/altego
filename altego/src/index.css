@@ -17,7 +17,7 @@
 }
 
 body {
-  background: url("/assets/background.jpg") center/cover no-repeat fixed;
+  background: url("/assets/x4_screen_044.png") center/cover no-repeat fixed;
   margin: 0;
   padding: 0;
 
@@ -212,6 +212,7 @@ hr {
      1px -1px 0 black,
     -1px  1px 0 black,
      1px  1px 0 black;
+  font-weight: bold;
 }
 
 

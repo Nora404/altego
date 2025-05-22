@@ -40,13 +40,6 @@
   width: 100%;
   max-width: 300px;
   min-height: 100px;
-  color: #ffffff;
-    text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-
   overflow: hidden;
     background-color: rgba(123, 195, 243, 0.2);
   background-image: repeating-linear-gradient(
