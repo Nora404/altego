@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import "./Plattform.css";
+import HologramPanel from "../Header/HologramPanel";
 
 type PlattformProps = {
   children: ReactNode;
@@ -15,10 +16,17 @@ export const Plattform = ({ children, title = "" }: PlattformProps) => {
 
   return (
     <div className="platform-container flex-col-center float-y-animation">
-      <div className="plattform-ad hologram-background outlined-text ">
+      <HologramPanel
+        title={title}
+        direction="up"
+        chevron={false}
+        showBtn={false}
+        isOpen={active}
+        panelWidth={"100%"}
+      >
         <h3>{title}</h3>
         {children}
-      </div>
+      </HologramPanel>
       <button
         onClick={handleClick}
         className={`platform ${active && "platform-active"}`}

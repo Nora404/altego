@@ -4,14 +4,15 @@ import "./HologramPanel.css";
 import ChevronIcon from "./ChevronIcon";
 
 interface HologramPanelProps {
-  title: string;
+  title?: string;
   children: ReactNode;
   panelWidth?: number | string;
   roundedTopRight?: boolean;
   chevron?: boolean;
+  showBtn?: boolean;
   className?: string;
   direction?: "down" | "up";
-  defaultOpen?: boolean;
+  isOpen?: boolean;
 }
 
 export default function HologramPanel({
@@ -20,11 +21,12 @@ export default function HologramPanel({
   panelWidth = 150,
   roundedTopRight = false,
   chevron = true,
+  showBtn = true,
   className = "",
   direction = "down",
-  defaultOpen = false,
+  isOpen = false,
 }: Readonly<HologramPanelProps>) {
-  const [open, setOpen] = useState(defaultOpen);
+  const [open, setOpen] = useState(isOpen);
   const contentRef = useRef<HTMLDivElement>(null);
   const [maxHeight, setMaxHeight] = useState(0);
 
@@ -35,6 +37,10 @@ export default function HologramPanel({
     setMaxHeight(open ? el.scrollHeight : 0);
   }, [open, children]);
 
+  useEffect(() => {
+    setOpen(isOpen);
+  }, [isOpen]);
+
   return (
     <div
       className={`hologram-wrapper ${className}`}
@@ -42,14 +48,16 @@ export default function HologramPanel({
         width: typeof panelWidth === "number" ? `${panelWidth}px` : panelWidth,
       }}
     >
-      <button
-        className="hologram-toggle"
-        onClick={() => setOpen((o) => !o)}
-        style={{ borderTopRightRadius: roundedTopRight ? "30px" : "0" }}
-      >
-        {chevron && <ChevronIcon open={open} />}
-        {title}
-      </button>
+      {showBtn && (
+        <button
+          className="hologram-toggle"
+          onClick={() => setOpen((o) => !o)}
+          style={{ borderTopRightRadius: roundedTopRight ? "30px" : "0" }}
+        >
+          {chevron && <ChevronIcon open={open} />}
+          {title}
+        </button>
+      )}
 
       <div
         ref={contentRef}
