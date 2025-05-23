@@ -7,6 +7,12 @@
 .platform {
   width: 100%;
   max-width: 300px;
+  cursor: crosshair;
+  border: none;
+  background-color: transparent;
+}
+
+.platform-active {
   background: radial-gradient(
     ellipse,
     rgba(67, 156, 227, 1) 0%,
