@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   line-height: 1.7;
   font-weight: 400;
 
@@ -12,8 +12,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   --header-h: 150px;
-  --footer-h: 40px; 
-  --menu-h:   40px; 
+  --footer-h: 40px;
+  --menu-h: 40px;
 }
 
 body {
@@ -21,8 +21,8 @@ body {
   margin: 0;
   padding: 0;
 
-  padding-top: calc(var(--header-h) + var(--menu-h));  
-  padding-bottom: var(--footer-h);  
+  padding-top: calc(var(--header-h) + var(--menu-h));
+  padding-bottom: var(--footer-h);
   overflow: hidden;
 }
 
@@ -42,15 +42,14 @@ hr {
 
 .layout {
   display: grid;
-  grid-template-areas:
-    "left  content  right";
+  grid-template-areas: "left  content  right";
   grid-template-columns:
     minmax(220px, 1fr)
     minmax(0, 1100px)
-    minmax(220px, 1fr);    
-    column-gap: 40px;           /* Abstand zwischen den Spalten */
+    minmax(220px, 1fr);
+  column-gap: 40px; /* Abstand zwischen den Spalten */
   height: calc(100vh - var(--header-h) - var(--menu-h) - var(--footer-h));
-  overflow: hidden;                /* verhindert Body-Scroll */
+  overflow: hidden; /* verhindert Body-Scroll */
 }
 
 #page {
@@ -58,68 +57,71 @@ hr {
   overflow-y: auto;
   overscroll-behavior: contain;
 
-  scrollbar-width: thin;                                     /* schlank  */
-  scrollbar-color: #96dcff22 transparent; 
+  scrollbar-width: thin; /* schlank  */
+  scrollbar-color: #96dcff22 transparent;
 }
-#page::-webkit-scrollbar           { width: 8px; }
-#page::-webkit-scrollbar-track     {
-  background: transparent;          /* Track durchsichtig */
+#page::-webkit-scrollbar {
+  width: 8px;
 }
-#page::-webkit-scrollbar-thumb     {
-  background: linear-gradient(to bottom,
-               rgba(150,220,255,0.6) 0%,
-               rgba( 30, 60, 90,0.9) 100%);
+#page::-webkit-scrollbar-track {
+  background: transparent; /* Track durchsichtig */
+}
+#page::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(150, 220, 255, 0.6) 0%,
+    rgba(30, 60, 90, 0.9) 100%
+  );
   border-radius: 4px;
-  box-shadow: 0 0 6px rgba(150,220,255,0.8) inset;
+  box-shadow: 0 0 6px rgba(150, 220, 255, 0.8) inset;
 }
 #page::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom,
-               rgba(180,235,255,0.8) 0%,
-               rgba( 30, 60, 90,1)   100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(180, 235, 255, 0.8) 0%,
+    rgba(30, 60, 90, 1) 100%
+  );
 }
 
-
-.article.left   { 
-  grid-area: left;  
+.article.left {
+  grid-area: left;
   align-items: flex-end;
 }
-.article.right  { 
-  grid-area: right; 
+.article.right {
+  grid-area: right;
   align-items: flex-start;
 }
 
 .article {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: flex-end;
-  height: 100%;
-  min-width: 0; 
+  height: calc(100% - var(--footer-h));
+  min-width: 0;
 }
 
-
 .glass {
-  background-color: rgba(218, 198, 146, 0.1); 
-  backdrop-filter: blur(10px);              
-  -webkit-backdrop-filter: blur(10px);       
+  background-color: rgba(218, 198, 146, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .glass-dark {
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(34, 34, 34, 0.8),         
+    rgba(34, 34, 34, 0.8),
     rgba(29, 29, 29, 0.8) 3px,
     rgba(15, 15, 15, 0.8) 3px,
     rgba(24, 24, 24, 0.8) 6px
   );
-  backdrop-filter: blur(10px);              
-  -webkit-backdrop-filter: blur(10px);     
-    color: rgb(197, 197, 197);  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgb(197, 197, 197);
 }
 
 .blue-bg {
-  display: block;       
-  width: 100%;          
-  padding: 4px 10px;    
+  display: block;
+  width: 100%;
+  padding: 4px 10px;
   box-sizing: border-box;
 }
 .blue-bg:hover {
@@ -178,7 +180,6 @@ hr {
   padding-right: 10px;
 }
 
-
 .w-full {
   width: 100%;
 }
@@ -190,7 +191,7 @@ hr {
   left: 0;
   height: 2px; /* Höhe des oberen "Randes" */
   width: 100%;
-  background: linear-gradient(to left, #A6852E, transparent);
+  background: linear-gradient(to left, #a6852e, transparent);
   pointer-events: none;
 }
 
@@ -201,21 +202,16 @@ hr {
   left: 0;
   height: 2px; /* Höhe des unteren "Randes" */
   width: 100%;
-  background: linear-gradient(to right, #A6852E, transparent);
+  background: linear-gradient(to right, #a6852e, transparent);
   pointer-events: none;
 }
 
 .outlined-text {
   color: white;
-  text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   font-weight: bold;
 }
-
-
 
 .banner-parent {
   position: relative;

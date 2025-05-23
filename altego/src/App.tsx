@@ -11,30 +11,41 @@ import { Plattform } from "./Layout/Content/Plattform";
 import { Banner } from "./Layout/Content/Banner";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Header />
       <Menu data={menuData} />
 
-      <div className="layout">        {/* ⬅︎ neu */}
+      <div className="layout">
+        {" "}
+        {/* ⬅︎ neu */}
         <div className="article left">
           <Plattform title="Buy X-Series online">
-            <img src="/assets/steam-logo.png" alt="screenshot" className="ad-img-1" />
+            <img
+              src="/assets/steam-logo.png"
+              alt="screenshot"
+              className="ad-img-1"
+            />
           </Plattform>
-
 
           <Plattform title="Games Showcase">
             <div className="flex-row-center banner-parent">
               <Banner text="Buy Now" angle={-10} />
-              <img src="/assets/X_Rebirth.jpg" alt="screenshot" className="ad-img-2"
-                style={{ margin: "5px", height: "100%" }} />
-              <img src="/assets/X4_Foundations.jpg" alt="screenshot" className="ad-img-2"
-                style={{ margin: "5px", height: "100%" }} />
+              <img
+                src="/assets/X_Rebirth.jpg"
+                alt="screenshot"
+                className="ad-img-2"
+                style={{ margin: "5px", height: "100%" }}
+              />
+              <img
+                src="/assets/X4_Foundations.jpg"
+                alt="screenshot"
+                className="ad-img-2"
+                style={{ margin: "5px", height: "100%" }}
+              />
             </div>
           </Plattform>
         </div>
-
         <div id="page">
           <Suspense fallback={<p>lädt …</p>}>
             <Routes>
@@ -46,20 +57,27 @@ function App() {
             </Routes>
           </Suspense>
         </div>
-
         <div className="article right">
           <Plattform title="Logindata">
-            Nora404<br />
+            Nora404
+            <br />
             Edit Profile
+            <div style={{ width: "500px" }}></div>
           </Plattform>
 
           <Plattform title="Community">
-            Users: 366141<br />
+            Users: 366141
+            <br />
             Logged in: 12
+            <div style={{ width: "500px" }}></div>
           </Plattform>
 
           <Plattform title="Neuster Screenshot">
-            <img src="/assets/x4_screen_205.jpg" alt="screenshot" className="ad-img-1" />
+            <img
+              src="/assets/x4_screen_205.jpg"
+              alt="screenshot"
+              className="ad-img-1"
+            />
           </Plattform>
         </div>
       </div>
