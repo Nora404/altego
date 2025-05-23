@@ -10,6 +10,8 @@ interface HologramPanelProps {
   roundedTopRight?: boolean;
   chevron?: boolean;
   className?: string;
+  direction?: "down" | "up";
+  defaultOpen?: boolean;
 }
 
 export default function HologramPanel({
@@ -19,8 +21,10 @@ export default function HologramPanel({
   roundedTopRight = false,
   chevron = true,
   className = "",
+  direction = "down",
+  defaultOpen = false,
 }: Readonly<HologramPanelProps>) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
   const contentRef = useRef<HTMLDivElement>(null);
   const [maxHeight, setMaxHeight] = useState(0);
 
@@ -49,10 +53,13 @@ export default function HologramPanel({
 
       <div
         ref={contentRef}
-        className="hologram-bg"
+        className={`hologram-bg ${direction}`}
         style={{
           maxHeight,
           transition: "max-height 0.35s ease",
+          ...(direction === "up"
+            ? { position: "absolute", bottom: "100%", top: "auto" }
+            : {}),
         }}
       >
         <hr />
