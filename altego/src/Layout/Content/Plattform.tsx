@@ -17,10 +17,7 @@ export const Plattform = ({ children, title = "" }: PlattformProps) => {
 
   return (
     <div className="platform-container flex-col-center float-y-animation">
-      {/* <div className="plattform-ad hologram-background outlined-text ">
-                <h3>{title}</h3>
-                {children}
-            </div> */}
+
       <ToTopHologram open={open} isFloating={false}>
         <div className="plattform-ad outlined-text ">
           <h3>{title}</h3>
@@ -29,7 +26,8 @@ export const Plattform = ({ children, title = "" }: PlattformProps) => {
       </ToTopHologram>
 
       <button className="platform" onClick={handleClick}>
-        <img src="/assets/plattform.svg" alt="ad" className="plattform-img" />
+        {open && <img src="/assets/plattform.svg" alt="ad" className="plattform-img" />}
+        {!open && <img src="/assets/plattform-off.svg" alt="ad" className="plattform-img" />}
       </button>
     </div>
   );
