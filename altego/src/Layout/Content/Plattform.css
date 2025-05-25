@@ -15,7 +15,7 @@
   width: 100%;
   min-width: 100px;
 }.plattform-img:hover {
-  cursor: url('/assets/fadenkreuz.svg'), auto;
+  cursor: url('/assets/fadenkreuz.svg')0 0, auto;
   filter: brightness(1.2) contrast(0.8) saturate(0.8);
 }
 
