@@ -1,0 +1,50 @@
+/* Das Panel */
+/* Hintergrund-only */
+.hologram-bg {
+  color: #ffffff;
+  background-color: rgba(123, 195, 243, 0.2);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(123, 195, 243, 0.3) 0 2px,
+    transparent 8px 10px
+  );
+  animation: hologram-scroll 30s linear infinite;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    #000 calc(100% - 10px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    #000 calc(100% - 10px),
+    transparent 100%
+  );
+}
+
+/* Position Down (öffnet nach unten) */
+.position-down--floating {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.position-down--inline {
+  position: static;
+}
+
+/* Position Up (öffnet nach oben) */
+.position-top--floating {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.position-top--inline {
+  position: static;
+}
