@@ -16,6 +16,7 @@
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  border: none
 }
 
 .plattform-img {
@@ -41,28 +42,6 @@
   max-width: 300px;
   min-height: 100px;
   overflow: hidden;
-    background-color: rgba(123, 195, 243, 0.2);
-  background-image: repeating-linear-gradient(
-    to bottom,
-    rgba(123, 195, 243, 0.3) 0 2px,
-    transparent 8px 10px
-  );
-  animation: hologram-scroll 30s linear infinite;
-
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0px,
-    #000 10px,
-    #000 calc(100% - 10px),
-    transparent 100% 
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0px,
-    #000 10px,
-    #000 calc(100% - 10px),
-    transparent 100%
-  );
   padding: 0 20px 10px 20px;
 }
 
@@ -76,9 +55,3 @@
   100% { transform: translateY(0); }
 }
 
-
-.hologram-background {
-  color: #ffffff;
-  background-color: rgba(123, 195, 243, 0.2);
-
-}
