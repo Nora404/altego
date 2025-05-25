@@ -14,6 +14,9 @@
 .plattform-img {
   width: 100%;
   min-width: 100px;
+}.plattform-img:hover {
+  cursor: url('/assets/fadenkreuz.svg'), auto;
+  filter: brightness(1.2) contrast(0.8) saturate(0.8);
 }
 
 .ad-img-2 {
@@ -40,6 +43,7 @@
 .float-y-animation {
   animation: floatY 2s ease-in-out infinite;
 }
+
 
 @keyframes floatY {
   0%   { transform: translateY(0); }
