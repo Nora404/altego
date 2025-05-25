@@ -17,7 +17,7 @@ function App() {
       <Header />
       <Menu data={menuData} />
 
-      <div className="layout">        {/* ⬅︎ neu */}
+      <div className="layout scroll-y">        {/* ⬅︎ neu */}
         <div className="article left">
           <Plattform title="Buy X-Series online">
             <img src="/assets/steam-logo.png" alt="screenshot" className="ad-img-1" />
@@ -35,7 +35,7 @@ function App() {
           </Plattform>
         </div>
 
-        <div id="page">
+        <div className="scroll-y">
           <Suspense fallback={<p>lädt …</p>}>
             <Routes>
               <Route element={<Content />}>
