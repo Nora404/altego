@@ -5,13 +5,17 @@ import "./TVNoise.css";
 interface TVNoiseProps {
   src: string;
   alt?: string;
+  running?: boolean;
 }
 
-const TVNoise: React.FC<TVNoiseProps> = ({ src, alt = "" }) => {
+const TVNoise: React.FC<TVNoiseProps> = ({ src, alt = "", running }) => {
   return (
     <div className="tv">
       {/* Hintergrundbild */}
-      <img src={src} alt={alt} className="tv__img" />
+      <div className={`tv__laufband${running ? " is-running" : ""}`}>
+        <img src={src} alt={alt} className="tv__img" />
+        <img src={src} alt={alt} className="tv__img" />
+      </div>
 
       {/* === Noise Overlay === */}
       <div className="tv__noise" />

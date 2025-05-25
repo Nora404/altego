@@ -5,7 +5,7 @@ import TVNoise from "./TVNoise";
 const Header = () => {
   return (
     <header className="custom-header">
-      <TVNoise src={"assets/x4-header.png"} />
+      <TVNoise src={"assets/x4-header.png"} running/>
       <div className="top-bar bl-bottom" />
       <div className="top-right-deco">DE - Login - Register</div>
       <div className="content">

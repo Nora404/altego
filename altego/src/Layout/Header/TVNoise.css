@@ -11,6 +11,8 @@
 
   /* Nur zum Testen */
   filter: brightness(1.2) contrast(0.8) saturate(0.8);
+
+  flex-shrink: 0;
 }
 
 /* ---------- Noise ---------- */
@@ -60,5 +62,26 @@
   }
   to {
     background-position: 0 100px;
+  }
+}
+
+
+/* running */
+.tv__laufband {
+  display: flex;
+  width: max-content;
+}
+
+/* Nur animieren, wenn is-running gesetzt ist */
+.tv__laufband.is-running {
+  animation: img-scroll 120s linear infinite;
+}
+
+@keyframes img-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
