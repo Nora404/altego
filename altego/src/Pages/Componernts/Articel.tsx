@@ -8,7 +8,7 @@ type Articel = {
   comments: number;
   img: string;
   autor: string;
-  content: string;
+  shortText: string;
 };
 
 type ArticelList = {
@@ -36,16 +36,15 @@ const ArticelItem: React.FC<{ post: Articel }> = ({ post }) => {
       <hr className="neon-orange" />
 
       {/* Bild + Content */}
-      <div className="flex-row">
+      <div className="flex-row-top">
         <img
           src={post.img}
           alt={post.title}
           className="articel-img"
         />
-        <div
-          className="flex-1 prose"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <p
+          className="articel-content"
+        >{post.shortText}</p>
       </div>
 
       {/* Footer */}
