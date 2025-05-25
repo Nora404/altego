@@ -16,7 +16,7 @@ export const Plattform = ({ children, title = "" }: PlattformProps) => {
 
 
   return (
-    <div className="platform-container flex-col-center float-y-animation">
+    <div className="platform-container flex-col float-y-animation">
 
       <ToTopHologram open={open} isFloating={false}>
         <div className="plattform-ad outlined-text ">

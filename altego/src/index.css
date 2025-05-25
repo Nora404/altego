@@ -184,6 +184,14 @@ hr {
   flex-direction: row;
 }
 
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+
 .flex-row {
   display: flex;
   justify-content: flex-start;
@@ -256,3 +264,10 @@ hr {
   overflow: hidden;
 }
 
+a {
+  color: rgba(100, 200, 255);
+}
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(100, 200, 255);
+}

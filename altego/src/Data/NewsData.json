@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2025-05-25",
+    "title": "Erster Beitrag",
+    "comments": 5,
+    "img": "/assets/news_2022_03_31_272.png",
+    "autor": "Anna",
+    "content": "<p>Willkommen zum <a href='/start'>ersten Beitrag</a>. Hier findest du die wichtigsten Infos.</p>"
+  },
+  {
+    "date": "2025-05-24",
+    "title": "Tipps und Tricks",
+    "comments": 2,
+    "img": "/assets/news_2025_03_21_333.png",
+    "autor": "Ben",
+    "content": "<ul><li>Tipp 1: <strong>Nutze Shortcuts</strong></li><li>Tipp 2: <a href='/hilfe'>Lies die Hilfe</a></li></ul>"
+  },
+  {
+    "date": "2025-05-23",
+    "title": "Galerie",
+    "comments": 8,
+    "img": "/assets/news_2025_04_03_334.png",
+    "autor": "Clara",
+    "content": "<p>Ein kleiner Einblick:</p>"
+  }
+]
