@@ -17,7 +17,7 @@
 }
 
 body {
-  background: url("/assets/x4_screen_044.png") center/cover no-repeat fixed;
+  background: url("/assets/bg-sky.png") center/cover no-repeat fixed;
   margin: 0;
   padding: 0;
 
@@ -131,6 +131,7 @@ hr {
   justify-content: flex-end;
   height: 100%;
   min-width: 0; 
+  /* max-width: 250px; */
 }
 
 
