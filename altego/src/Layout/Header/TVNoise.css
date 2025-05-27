@@ -34,7 +34,7 @@
     rgba(0, 0, 0, 0.5) 0 2px,
     transparent 4px 3px
   );
-  animation: vShift 30s linear infinite;
+  animation: vShift 20s linear infinite;
   mix-blend-mode: multiply;
 }
 
