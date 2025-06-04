@@ -10,12 +10,7 @@ const Archiv = () => {
 
       <div>
         {/* width/height passen optional zur Originalgröße des SVG */}
-        <HologramMask
-          icon={myIcon}
-          color="rgba(0,255,255)"
-          width={200}
-          height={200}
-        />
+        <HologramMask icon={myIcon} color="#FF00D6" width={50} height={50} />
       </div>
     </div>
   );

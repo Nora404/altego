@@ -37,14 +37,14 @@
   background-image: repeating-linear-gradient(
     to right,
     transparent 0px,
-    transparent 6px,
-    var(--holo-color) 6px,
-    var(--holo-color) 10px
+    transparent 4px,
+    var(--holo-color) 4px,
+    var(--holo-color) 8px
   );
   filter: blur(2px);
 
   /* Animation: verschiebt die Ebene von translateX(0) auf translateX(50%) */
-  animation: scrollLines 25s linear infinite;
+  animation: scrollLines 10s linear infinite;
 }
 
 /* ------------------------------------------------
