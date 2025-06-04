@@ -1,46 +1,49 @@
 import { useRef, useEffect, useState, type ReactNode } from "react";
 import "./Hologram.css";
 
-
-interface ToTopHologramProps {
-    open: boolean;
-    children: ReactNode;
-    /** true = über Layout schweben, false = Layout verschieben */
-    isFloating?: boolean;
+interface ToDownHologramProps {
+  open: boolean;
+  children: ReactNode;
+  isFloating?: boolean;
 }
 
-export default function ToTopHologram({
-    open,
-    children,
-    isFloating = true,
-}: Readonly<ToTopHologramProps>) {
-    const ref = useRef<HTMLDivElement>(null);
-    const [maxHeight, setMaxHeight] = useState(0);
+export default function ToDownHologram({
+  open,
+  children,
+  isFloating = true,
+}: Readonly<ToDownHologramProps>) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState<string | number>("max-content");
+  const [hasMounted, setHasMounted] = useState(false);
 
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        setMaxHeight(open ? el.scrollHeight : 0);
-    }, [open, children]);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
 
-    const posClass = isFloating
-        ? "position-top--floating"
-        : "position-top--inline";
+    // Nach dem ersten Mount aktivieren wir das animierte Verhalten
+    if (hasMounted) {
+      setMaxHeight(open ? el.scrollHeight : 0);
+    } else {
+      setHasMounted(true);
+    }
+  }, [open, children, hasMounted]);
 
-    return (
-        <div
-            ref={ref}
-            className={`hologram-bg ${posClass}`}
-            style={{
-                maxHeight,
-                overflow: "hidden",
-                transformOrigin: "bottom",
-                transform: open ? "scaleY(1)" : "scaleY(0)",
-                transition: "max-height 0.35s ease, transform 0.35s ease",
-            }}
-        >
-            {children}
-            <hr className="neon-blue" />
-        </div>
-    );
+  const posClass = isFloating
+    ? "position-down--floating"
+    : "position-down--inline";
+
+  return (
+    <div
+      ref={ref}
+      className={`hologram-bg ${posClass}`}
+      style={{
+        maxHeight,
+        transition: hasMounted ? "max-height 0.35s ease" : "none",
+        overflow: "hidden",
+      }}
+    >
+      <hr className="neon-blue" />
+      {children}
+    </div>
+  );
 }
