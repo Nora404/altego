@@ -18,11 +18,7 @@ body {
   min-height: 100vh;
 }
 
-.layout-header {
-  grid-area: header;
-  background-color: white;
-  padding: 0;
-}
+/* ----------- HEADER GRID ----------- */
 
 .header-grid {
   display: grid;
@@ -36,7 +32,6 @@ body {
 }
 
 .header-grid > div {
-  background-color: gray;
   border: 1px solid black;
   text-align: center;
 }
@@ -49,9 +44,31 @@ body {
 }
 .header-top {
   grid-area: top;
+  background-color: black;
 }
 .header-bottom {
   grid-area: bottom;
+  background-color: black;
+}
+
+/* ----------- LAYOUT GRID ----------- */
+
+.layout-header {
+  grid-area: header;
+  background-color: white;
+  padding: 0;
+}
+
+.layout-menu {
+  grid-area: menu;
+  height: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  align-items: stretch;
+  background: linear-gradient(to bottom, #3b3b3b, #2a2a2a);
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #111;
 }
 
 .layout-main {
@@ -83,24 +100,34 @@ body {
   align-items: flex-start;
 }
 
+.layout-footer {
+  grid-area: footer;
+  background-color: black;
+  padding: 5px;
+  color: white;
+}
+
+/* ----------- HELPER ----------- */
+
 .sticky {
   position: sticky;
   bottom: 0;
 }
 
-.layout-footer {
-  grid-area: footer;
-  background-color: white;
-  padding: 5px;
-  border: 1px solid black;
+button {
+  background: linear-gradient(to bottom, #4a4a4a, #2a2a2a);
+  border: 1px solid #666;
+  color: #ddd;
+  text-shadow: 1px 1px 0 #000;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.2s ease;
 }
-
-.layout-menu {
-  grid-area: menu;
-  background-color: #6d64a6;
-  height: 40px;
-  border: 1px solid black;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+button:hover {
+  color: #66ccff;
+  text-shadow: 0 0 4px #66ccff, 0 0 8px #66ccff, 0 0 12px #66ccff;
+  box-shadow: 0 0 4px #66ccff, 0 0 10px #66ccff;
+  background: linear-gradient(to bottom, #444, #2a2a2a);
+  border-color: #66ccff;
 }
