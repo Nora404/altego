@@ -1,0 +1,60 @@
+/* HologramMask.css */
+
+/* ----------------------------
+   1. Statischer Wrapper (Maske)
+   ---------------------------- */
+.hologram-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  /* SVG-Maske über CSS-Variable (wird im Inline-Style gesetzt) */
+  mask-image: var(--mask-url);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  /* WebKit-Kompatibilität */
+  -webkit-mask-image: var(--mask-url);
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+/* -----------------------------------------------------
+   2. Animierte Linien-Ebene (doppelt so breit wie der Wrapper)
+   ----------------------------------------------------- */
+.hologram-lines {
+  position: absolute;
+  top: 0;
+
+  /* Start ganz links außerhalb (left: –100% des Wrapper-Bereichs) */
+  left: -100%;
+  width: 200%;
+  height: 100%;
+
+  /* Vertikale, „glowende“ Linien */
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 6px,
+    var(--holo-color) 6px,
+    var(--holo-color) 10px
+  );
+  filter: blur(2px);
+
+  /* Animation: verschiebt die Ebene von translateX(0) auf translateX(50%) */
+  animation: scrollLines 25s linear infinite;
+}
+
+/* ------------------------------------------------
+   3. Keyframes: nur die transform-Eigenschaft ändert sich
+   ------------------------------------------------ */
+@keyframes scrollLines {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
