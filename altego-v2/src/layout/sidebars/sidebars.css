@@ -1,19 +1,28 @@
 .platform-container {
   width: 100%;
+  min-width: 70px;
+  max-width: 300px;
   margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.platform-container > button {
+    margin-top: 5px;
+}.platform-container > button:hover {
+    box-shadow: none;
+    border: none;
 }
 
 .platform {
   background-color: transparent;
   width: 100%;
-  max-width: 300px;
   border: none;
 }
 
-.plattform-img {
-  width: 100%;
-  min-width: 100px;
-}.plattform-img:hover {
+.plattform-img:hover {
   cursor: url('/icons/fadenkreuz.svg')0 0, auto;
   filter: brightness(1.2) contrast(0.8) saturate(0.8);
 }
@@ -32,11 +41,12 @@
 }
 
 .plattform-ad {
-  width: 100%;
-  max-width: 300px;
-  min-height: 100px;
   overflow: hidden;
   padding: 0 20px 10px 20px;
+}
+
+.plattform-ad > h3 {
+    margin: 0.2rem 0;
 }
 
 .float-y-animation {

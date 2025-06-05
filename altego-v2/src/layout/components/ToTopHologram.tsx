@@ -39,6 +39,7 @@ export default function ToDownHologram({
         maxHeight,
         transition: hasMounted ? "max-height 0.35s ease" : "none",
         overflow: "hidden",
+        width: "100%",
       }}
     >
       <hr className="neon-blue" />
