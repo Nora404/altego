@@ -20,11 +20,12 @@
   --background-color: black;
   --text-color-prim: rgb(230, 230, 230);
   
-  --neon-blue: rgb(110, 210, 255);
-  --neon-orange: rgb(255, 165, 0);
-  --neon-white: rgb(255, 255, 255);
-  
-  --neon: var(--neon-orange);
+  --neon-blue-rgb: 110, 210, 255;
+  --neon-orange-rgb: 255, 165, 0;
+  --neon-white-rgb: 255, 255, 255;
+
+  --neon-rgb: var(--neon-orange-rgb); 
+  --neon: rgb(var(--neon-rgb)); 
 }
 
 html,
@@ -164,6 +165,23 @@ a.outlined-text {
   );
   backdrop-filter: blur(10px);              
   -webkit-backdrop-filter: blur(10px);     
+}
+
+.neon-glow-vertical {
+  /* Vertikaler Verlauf von vollem Neon bis Transparent */
+  background: linear-gradient(
+    to top,
+    rgba(var(--neon-rgb), 1),
+    rgba(var(--neon-rgb), 0.7),
+    rgba(var(--neon-rgb), 0.3),
+    transparent
+  );
+
+  /* Mehrfacher Glow-Schein in der aktuellen Neon-Farbe */
+  box-shadow:
+    0 0 12px rgba(var(--neon-rgb), 0.9),
+    0 0 24px rgba(var(--neon-rgb), 0.6),
+    0 0 36px rgba(var(--neon-rgb), 0.4);
 }
 
 .bl-top::before {

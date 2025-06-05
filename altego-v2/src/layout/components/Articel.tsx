@@ -32,7 +32,7 @@ const ArticelItem: React.FC<{ post: Articel }> = ({ post }) => {
         {post.date} – {post.title}
       </div>
 
-      <hr className="neon-orange" />
+      <hr className="neon-glow-vertical" />
 
       {/* Bild + Content */}
       <div className="flex-row-top">
