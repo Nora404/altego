@@ -6,7 +6,7 @@ const NeonSwitcher = () => {
     };
 
     return (
-        <div style={{ display: "flex", gap: "1rem" }}>
+        <div style={{ display: "flex", gap: "1rem", paddingRight: "1rem" }}>
             <div
                 className="led-button led-blue"
                 onClick={() => setNeon("--neon-blue")}

@@ -113,7 +113,7 @@ a.outlined-text {
 
   display: flex;              
   align-items: start;       
-  justify-content: flex-start; 
+  justify-content: space-between; 
 }
 
 .layout-main {

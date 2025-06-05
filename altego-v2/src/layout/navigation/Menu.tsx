@@ -8,7 +8,7 @@ interface MenuProps {
 }
 
 const Menu: React.FC<MenuProps> = ({ data }) => (
-    <>
+    <div>
         {data.map(({ title, entries }) => (
             <HologramPanel
                 key={title}
@@ -24,7 +24,7 @@ const Menu: React.FC<MenuProps> = ({ data }) => (
                 ))}
             </HologramPanel>
         ))}
-    </>
+    </div>
 );
 
 export default Menu;
