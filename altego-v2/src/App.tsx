@@ -6,6 +6,8 @@ import Header from "./layout/header/Header"
 import Content from "./layout/main/Content"
 import Menu from "./layout/navigation/Menu"
 import { menuData } from "./data/MenuData";
+import LeftSide from "./layout/sidebars/LeftSide"
+import RightSide from "./layout/sidebars/RightSide"
 
 function App() {
 
@@ -20,12 +22,7 @@ function App() {
         </div>
         <div className="layout-sidebar-left">
           <div className="sticky">
-            <div>
-              left Ad 1
-            </div>
-            <div>
-              left Ad 2
-            </div>
+            <LeftSide />
           </div>
         </div>
         <div className="layout-main">
@@ -41,12 +38,7 @@ function App() {
         </div>
         <div className="layout-sidebar-right">
           <div className="sticky">
-            <div>
-              right Ad 1
-            </div>
-            <div>
-              right Ad 2
-            </div>
+            <RightSide />
           </div>
         </div>
         <div className="layout-footer">footer</div>
