@@ -1,15 +1,11 @@
+import Header from "./layout/header/Header"
 
 function App() {
 
   return (
     <div className="grid-container">
       <div className="layout-header">
-        <div className="header-grid">
-          <div className="header-logo">logo</div>
-          <div className="header-title">header</div>
-          <div className="header-top"></div>
-          <div className="header-bottom"></div>
-        </div>
+        <Header />
       </div>
       <div className="layout-menu">
         <button>Btn 1</button>

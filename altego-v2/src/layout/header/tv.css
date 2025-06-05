@@ -1,0 +1,79 @@
+.tv {
+  position: relative;
+  overflow: hidden; 
+}
+
+.tv-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* skaliert dyn. Bilder */
+  filter: brightness(1.2) contrast(0.8) saturate(0.8);
+  flex-shrink: 0;
+}
+
+.tv-noise {
+  position: absolute;
+  inset: 0;
+  background: url("ui/noise.png");
+  opacity: 0.25; /* Stärke justieren */
+  animation: noise 0.25s steps(1) infinite;
+}
+
+.tv-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0 2px,
+    transparent 4px 3px
+  );
+  animation: vShift 20s linear infinite;
+  mix-blend-mode: multiply;
+}
+
+@keyframes noise {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5%, 5%);
+  }
+  50% {
+    transform: translate(3%, -3%);
+  }
+  75% {
+    transform: translate(-2%, 2%);
+  }
+}
+
+/* unregelmäßiges vertikales „Abdriften“  */
+@keyframes vShift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100px;
+  }
+}
+
+
+/* running */
+.tv-laufband {
+  display: flex;
+}
+
+/* Nur animieren, wenn is-running gesetzt ist */
+.tv-laufband.is-running {
+  animation: img-scroll 120s linear infinite;
+}
+
+@keyframes img-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
