@@ -16,7 +16,7 @@ const RightSide = () => {
             </Plattform>
 
             <Plattform title="Neuster Screenshot">
-                <img src="/screen/x4_screen_205.jpg" alt="screenshot" className="ad-img-1" />
+                <img src="/screens/x4_screen_172.jpg" alt="screenshot" className="ad-img-1" />
             </Plattform>
         </div>
     );

@@ -9,12 +9,10 @@ const LeftSide = () => {
             </Plattform>
 
             <Plattform title="Games Showcase">
-                <div className="flex-row-center banner-parent">
+                <div className="banner-parent">
                     <Banner text="Buy Now" angle={-10} />
-                    <img src="/images/X_Rebirth.jpg" alt="screenshot" className="ad-img-2"
-                        style={{ margin: "5px", height: "100%" }} />
-                    <img src="/images/X4_Foundations.jpg" alt="screenshot" className="ad-img-2"
-                        style={{ margin: "5px", height: "100%" }} />
+                    <img src="/images/X_Rebirth.jpg" alt="screenshot" className="ad-img-2" />
+                    <img src="/images/X4_Foundations.jpg" alt="screenshot" className="ad-img-2" />
                 </div>
             </Plattform>
         </div>

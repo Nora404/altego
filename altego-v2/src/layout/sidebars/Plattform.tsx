@@ -1,5 +1,4 @@
 import { useState, type ReactNode } from "react";
-import "./Plattform.css";
 import ToTopHologram from "../components/ToTopHologram";
 
 type PlattformProps = {
@@ -16,7 +15,7 @@ export const Plattform = ({ children, title = "" }: PlattformProps) => {
 
 
   return (
-    <div className="platform-container flex-col float-y-animation">
+    <div className="platform-container float-y-animation" style={{ paddingBottom: "10px" }}>
 
       <ToTopHologram open={open} isFloating={false}>
         <div className="plattform-ad outlined-text ">

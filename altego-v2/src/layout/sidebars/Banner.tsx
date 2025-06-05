@@ -1,5 +1,4 @@
 import type { CSSProperties } from "react";
-import "./Banner.css";
 
 type BannerProps = {
     text?: string;   // Standard: "Buy Now"
