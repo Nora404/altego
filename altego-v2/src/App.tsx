@@ -8,6 +8,7 @@ import Menu from "./layout/navigation/Menu"
 import { menuData } from "./data/MenuData";
 import LeftSide from "./layout/sidebars/LeftSide"
 import RightSide from "./layout/sidebars/RightSide"
+import NeonSwitcher from "./layout/components/NeonSwitcher"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         </div>
         <div className="layout-menu">
           <Menu data={menuData} />
+          <NeonSwitcher />
         </div>
         <div className="layout-sidebar-left">
           <div className="sticky">
@@ -41,7 +43,7 @@ function App() {
             <RightSide />
           </div>
         </div>
-        <div className="layout-footer">footer</div>
+        <div className="layout-footer"></div>
       </div>
     </BrowserRouter>
   )

@@ -1,0 +1,26 @@
+const NeonSwitcher = () => {
+    const setNeon = (varName: string) => {
+        const root = document.documentElement;
+        const value = getComputedStyle(root).getPropertyValue(varName).trim();
+        root.style.setProperty("--neon", value);
+    };
+
+    return (
+        <div style={{ display: "flex", gap: "1rem" }}>
+            <div
+                className="led-button led-blue"
+                onClick={() => setNeon("--neon-blue")}
+            />
+            <div
+                className="led-button led-orange"
+                onClick={() => setNeon("--neon-orange")}
+            />
+            <div
+                className="led-button led-white"
+                onClick={() => setNeon("--neon-white")}
+            />
+        </div>
+    );
+};
+
+export default NeonSwitcher;

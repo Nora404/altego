@@ -132,3 +132,96 @@
     background-position: 0 100px;
   }
 }
+
+
+.led-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgb(77, 77, 77);
+ cursor: pointer;
+  /* Damit das Innere wie eine Kugel wirkt, nutzen wir ein radial-gradient */
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.2) 15%,
+    rgba(0, 0, 0, 0.1) 75%,
+    transparent 100%
+  );
+  /* Grund‐Farbe einkleiden wir mittels color, die in den Farb‐Klassen gesetzt wird */
+  color: currentColor;
+  position: relative;
+  box-shadow:
+    /* äußeres Glow */
+    /* 0 0 6px currentColor, */
+    /* leichter Nach‐unten‐Schatten */
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    /* innerer Schatten, um eine tiefe Kuppel anzudeuten */
+    inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    inset 0 2px 3px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Beim Hover ein bisschen aufleuchten und herauskommen lassen */
+.led-button:hover {
+  transform: scale(1.2);
+  box-shadow:
+    /* stärkerer Glow beim Hover */
+    0 0 10px currentColor,
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    inset 0 2px 3px rgba(255, 255, 255, 0.3);
+}
+
+.led-blue {
+  --led-color-base: rgb(110, 210, 255);
+  /* Grundfarbe als Farbverlauf‐Layer unten drunter: */
+  background-image:
+    /* Farbverlauf von heller Mitte zu etwas dunklerem Rand */
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(110, 210, 255, 1) 30%,
+      rgba(20, 100, 140, 1) 100%
+    ),
+    /* Glas‐Highlight oben links */
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.6) 0%,
+      transparent 50%
+    );
+  color: var(--led-color-base);
+}
+
+/* 2) Orange */
+.led-orange {
+  --led-color-base: rgb(255, 165, 0);
+  background-image:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 165, 0, 1) 30%,
+      rgba(140, 80, 0, 1) 100%
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.6) 0%,
+      transparent 50%
+    );
+  color: var(--led-color-base);
+}
+
+/* 3) Weiß */
+.led-white {
+  --led-color-base: rgb(255, 255, 255);
+  background-image:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(180, 180, 180, 1) 100%
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.75) 0%,
+      transparent 50%
+    );
+  color: var(--led-color-base);
+}
