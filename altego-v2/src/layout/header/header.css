@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: flex-end;
   padding-right: 10px;
-  color: var(--text-color-sec);
+  color: var(--neon);
 }
 
 .bottom-left-deco {

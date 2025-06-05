@@ -38,3 +38,97 @@
     0 0 24px rgba(255, 255, 255, 0.6),
     0 0 36px rgba(255, 255, 255, 0.4);
 }
+
+.outlined-text {
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  font-weight: bold;
+}
+
+.articel {
+  margin-bottom: 2rem;
+}
+
+.articel-header {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  background-color: black;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.articel-img {
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.articel-content {
+  padding-left: 1rem;
+}
+
+
+.hologram-bg {
+  color: #ffffff;
+  background-color: rgba(123, 195, 243, 0.4);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(51, 140, 198, 0.5) 0 4px,
+    transparent 4px 8px
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    #000 calc(100% - 10px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    #000 calc(100% - 10px),
+    transparent 100%
+  );
+  animation: vShift 15s linear infinite;
+}
+
+
+
+/* Position Down (öffnet nach unten) */
+.position-down--floating {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.position-down--inline {
+  position: static;
+}
+
+/* Position Up (öffnet nach oben) */
+.position-top--floating {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.position-top--inline {
+  position: static;
+}
+
+@keyframes vShift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100px;
+  }
+}

@@ -1,75 +1,57 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Suspense } from "react"
+import { routes } from "./routing"
+
 import Header from "./layout/header/Header"
+import Content from "./layout/main/Content"
+import Menu from "./layout/navigation/Menu"
+import { menuData } from "./data/MenuData";
 
 function App() {
 
   return (
-    <div className="grid-container">
-      <div className="layout-header">
-        <Header />
-      </div>
-      <div className="layout-menu">
-        <button>Btn 1</button>
-        <button>Btn 2</button>
-        <button>Btn 3</button>
-        <button>Btn 4</button>
-        <button>Btn 5</button>
-      </div>
-      <div className="layout-sidebar-left">
-        <div className="sticky">
-          <div>
-            left Ad 1
-          </div>
-          <div>
-            left Ad 2
+    <BrowserRouter>
+      <div className="grid-container">
+        <div className="layout-header">
+          <Header />
+        </div>
+        <div className="layout-menu">
+          <Menu data={menuData} />
+        </div>
+        <div className="layout-sidebar-left">
+          <div className="sticky">
+            <div>
+              left Ad 1
+            </div>
+            <div>
+              left Ad 2
+            </div>
           </div>
         </div>
-      </div>
-      <div className="layout-main glass-dark">
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        <p>Lorem ipsum.</p>
-        ...
-      </div>
-      <div className="layout-sidebar-right">
-        <div className="sticky">
-          <div>
-            right Ad 1
-          </div>
-          <div>
-            right Ad 2
+        <div className="layout-main">
+          <Suspense fallback={<p>lädt …</p>}>
+            <Routes>
+              <Route element={<Content />}>
+                {routes.map(({ path, component: Page }) => (
+                  <Route key={path} path={path} element={<Page />} />
+                ))}
+              </Route>
+            </Routes>
+          </Suspense>
+        </div>
+        <div className="layout-sidebar-right">
+          <div className="sticky">
+            <div>
+              right Ad 1
+            </div>
+            <div>
+              right Ad 2
+            </div>
           </div>
         </div>
+        <div className="layout-footer">footer</div>
       </div>
-      <div className="layout-footer">footer</div>
-    </div>
+    </BrowserRouter>
   )
 }
 
