@@ -1,3 +1,9 @@
+@import './layout/footer/footer.css';
+@import './layout/header/header.css';
+@import './layout/main/main.css';
+@import './layout/sidebars/sidebars.css';
+@import './layout/components/component.css';
+
 :root {
   font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
   line-height: 1.7;
