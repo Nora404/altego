@@ -10,10 +10,11 @@
 }
 
 .platform-container > button {
-    margin-top: 5px;
-}.platform-container > button:hover {
-    box-shadow: none;
-    border: none;
+  margin-top: 5px;
+}
+.platform-container > button:hover {
+  box-shadow: none;
+  border: none;
 }
 
 .platform {
@@ -23,20 +24,20 @@
 }
 
 .plattform-img:hover {
-  cursor: url('/icons/fadenkreuz.svg')0 0, auto;
+  cursor: url("/icons/fadenkreuz.svg") 20 20, auto;
   filter: brightness(1.2) contrast(0.8) saturate(0.8);
 }
 
 .ad-img-2 {
-  width: calc(50% - 10px);   
-  object-fit: cover; 
+  width: calc(50% - 10px);
+  object-fit: cover;
   opacity: 0.9;
   margin: 5px;
 }
 .ad-img-1 {
-  height: auto;              
-  width: 100%;   
-  object-fit: cover; 
+  height: auto;
+  width: 100%;
+  object-fit: cover;
   opacity: 0.9;
 }
 
@@ -46,21 +47,24 @@
 }
 
 .plattform-ad > h3 {
-    margin: 0.2rem 0;
+  margin: 0.2rem 0;
 }
 
 .float-y-animation {
   animation: floatY 2s ease-in-out infinite;
 }
 
-
 @keyframes floatY {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-3px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-
-
 
 .buy-banner {
   position: absolute;
