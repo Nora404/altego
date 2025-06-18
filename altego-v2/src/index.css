@@ -1,12 +1,12 @@
-@import './layout/footer/footer.css';
-@import './layout/header/header.css';
-@import './layout/main/content.css';
-@import './layout/sidebars/sidebars.css';
-@import './layout/components/component.css';
-@import './layout/navigation/navigation.css';
+@import "./layout/footer/footer.css";
+@import "./layout/header/header.css";
+@import "./layout/main/content.css";
+@import "./layout/sidebars/sidebars.css";
+@import "./layout/components/component.css";
+@import "./layout/navigation/navigation.css";
 
 :root {
-  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   line-height: 1.7;
   font-weight: 400;
 
@@ -19,13 +19,13 @@
 
   --background-color: black;
   --text-color-prim: rgb(230, 230, 230);
-  
+
   --neon-blue-rgb: 110, 210, 255;
   --neon-orange-rgb: 255, 165, 0;
   --neon-white-rgb: 255, 255, 255;
 
-  --neon-rgb: var(--neon-orange-rgb); 
-  --neon: rgb(var(--neon-rgb)); 
+  --neon-rgb: var(--neon-orange-rgb);
+  --neon: rgb(var(--neon-rgb));
 }
 
 html,
@@ -76,15 +76,11 @@ a:hover {
 }
 a.outlined-text {
   color: white;
-  text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   font-weight: bold;
   text-decoration: none;
 }
-
 
 /* ----------- LAYOUT GRID ----------- */
 .grid-container {
@@ -112,9 +108,9 @@ a.outlined-text {
   z-index: 10;
   background: var(--background-color);
 
-  display: flex;              
-  align-items: start;       
-  justify-content: space-between; 
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
 }
 
 .layout-main {
@@ -128,7 +124,6 @@ a.outlined-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .layout-sidebar-right {
@@ -137,7 +132,6 @@ a.outlined-text {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
 }
 
 .layout-footer {
@@ -148,23 +142,40 @@ a.outlined-text {
   text-align: center;
 }
 
-
 /* ----------- HELPER ----------- */
-.sticky {
+#mobile-menu {
+  display: none;
+}
+
+#desktop-menu {
+  height: 100%;
+}
+
+.sidebar-left {
   position: sticky;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.sidebar-right {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .glass-dark {
   background-image: repeating-linear-gradient(
     to bottom,
-    rgba(34, 34, 34, 0.8),         
+    rgba(34, 34, 34, 0.8),
     rgba(29, 29, 29, 0.8) 3px,
     rgba(15, 15, 15, 0.8) 3px,
     rgba(24, 24, 24, 0.8) 6px
   );
-  backdrop-filter: blur(10px);              
-  -webkit-backdrop-filter: blur(10px);     
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .neon-glow-vertical {
@@ -178,10 +189,8 @@ a.outlined-text {
   );
 
   /* Mehrfacher Glow-Schein in der aktuellen Neon-Farbe */
-  box-shadow:
-    0 0 12px rgba(var(--neon-rgb), 0.9),
-    0 0 24px rgba(var(--neon-rgb), 0.6),
-    0 0 36px rgba(var(--neon-rgb), 0.4);
+  box-shadow: 0 0 12px rgba(var(--neon-rgb), 0.9),
+    0 0 24px rgba(var(--neon-rgb), 0.6), 0 0 36px rgba(var(--neon-rgb), 0.4);
 }
 
 .bl-top::before {
@@ -200,7 +209,7 @@ a.outlined-text {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 2px; 
+  height: 2px;
   width: 100%;
   background: linear-gradient(to right, var(--neon), transparent);
   pointer-events: none;
@@ -212,22 +221,118 @@ a.outlined-text {
   overflow-y: auto;
   overscroll-behavior: contain;
 
-  scrollbar-width: thin;                                   
-  scrollbar-color: #96dcff22 transparent; 
+  scrollbar-width: thin;
+  scrollbar-color: #96dcff22 transparent;
 }
-.scroll-y::-webkit-scrollbar           { width: 8px; }
-.scroll-y::-webkit-scrollbar-track     {
-  background: transparent;          
+.scroll-y::-webkit-scrollbar {
+  width: 8px;
 }
-.scroll-y::-webkit-scrollbar-thumb     {
-  background: linear-gradient(to bottom,
-               rgba(150,220,255,0.6) 0%,
-               rgba( 30, 60, 90,0.9) 100%);
+.scroll-y::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-y::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(150, 220, 255, 0.6) 0%,
+    rgba(30, 60, 90, 0.9) 100%
+  );
   border-radius: 4px;
-  box-shadow: 0 0 6px rgba(150,220,255,0.8) inset;
+  box-shadow: 0 0 6px rgba(150, 220, 255, 0.8) inset;
 }
 .scroll-y::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom,
-               rgba(180,235,255,0.8) 0%,
-               rgba( 30, 60, 90,1)   100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(180, 235, 255, 0.8) 0%,
+    rgba(30, 60, 90, 1) 100%
+  );
+}
+
+/* ----------- MEDIA ----------- */
+
+@media screen and (max-width: 1110px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "menu"
+      "main"
+      "footer";
+  }
+  .header-grid {
+    grid-template-columns: 80px auto;
+    grid-template-rows: 15px 60px 15px;
+  }
+
+  .layout-sidebar-left {
+    display: none;
+  }
+
+  .layout-sidebar-right {
+    display: none;
+  }
+
+  .layout-main {
+    margin: 0 5px;
+  }
+
+  #desktop-menu {
+    display: none;
+  }
+  #mobile-menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+/* ----------- MOBILE PANEL ----------- */
+
+.slide-panel {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: calc(100% - 5px);
+  height: max-content;
+  z-index: 50;
+  display: none;
+  background-color: #555;
+  border: 1px solid black;
+  padding: 5px;
+  color: #ffffff;
+}
+
+.slide-panel.show {
+  display: block;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.slide-left {
+  animation-name: slideFromLeft;
+}
+.slide-right {
+  animation-name: slideFromRight;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
