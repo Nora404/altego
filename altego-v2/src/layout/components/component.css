@@ -6,10 +6,8 @@
     rgba(150, 220, 255, 0.3),
     transparent
   );
-  box-shadow:
-    0 0 12px rgba(150, 220, 255, 0.9),
-    0 0 24px rgba(150, 220, 255, 0.6),
-    0 0 36px rgba(150, 220, 255, 0.4);
+  box-shadow: 0 0 12px rgba(150, 220, 255, 0.9),
+    0 0 24px rgba(150, 220, 255, 0.6), 0 0 36px rgba(150, 220, 255, 0.4);
 }
 
 .neon-orange {
@@ -20,9 +18,7 @@
     rgba(255, 180, 80, 0.3),
     transparent
   );
-  box-shadow:
-    0 0 12px rgba(255, 180, 80, 0.9),
-    0 0 24px rgba(255, 180, 80, 0.6),
+  box-shadow: 0 0 12px rgba(255, 180, 80, 0.9), 0 0 24px rgba(255, 180, 80, 0.6),
     0 0 36px rgba(255, 180, 80, 0.4);
 }
 .neon-white {
@@ -33,19 +29,14 @@
     rgba(255, 255, 255, 0.3),
     transparent
   );
-  box-shadow:
-    0 0 12px rgba(255, 255, 255, 0.9),
-    0 0 24px rgba(255, 255, 255, 0.6),
-    0 0 36px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.9),
+    0 0 24px rgba(255, 255, 255, 0.6), 0 0 36px rgba(255, 255, 255, 0.4);
 }
 
 .outlined-text {
   color: white;
-  text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
   font-weight: bold;
 }
 
@@ -72,7 +63,6 @@
   padding-left: 1rem;
 }
 
-
 .hologram-bg {
   color: #ffffff;
   background-color: rgba(123, 195, 243, 0.4);
@@ -97,8 +87,6 @@
   );
   animation: vShift 15s linear infinite;
 }
-
-
 
 /* Position Down (öffnet nach unten) */
 .position-down--floating {
@@ -133,13 +121,12 @@
   }
 }
 
-
 .led-button {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   border: 1px solid rgb(77, 77, 77);
- cursor: pointer;
+  cursor: pointer;
   /* Damit das Innere wie eine Kugel wirkt, nutzen wir ein radial-gradient */
   background: radial-gradient(
     circle at 30% 30%,
@@ -154,10 +141,9 @@
   box-shadow:
     /* äußeres Glow */
     /* 0 0 6px currentColor, */
-    /* leichter Nach‐unten‐Schatten */
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    /* innerer Schatten, um eine tiefe Kuppel anzudeuten */
-    inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    /* leichter Nach‐unten‐Schatten */ 0
+      2px 4px rgba(0, 0, 0, 0.4),
+    /* innerer Schatten, um eine tiefe Kuppel anzudeuten */ inset 0 -2px 4px rgba(0, 0, 0, 0.6),
     inset 0 2px 3px rgba(255, 255, 255, 0.2);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
@@ -166,10 +152,8 @@
 .led-button:hover {
   transform: scale(1.2);
   box-shadow:
-    /* stärkerer Glow beim Hover */
-    0 0 10px currentColor,
-    0 2px 6px rgba(0, 0, 0, 0.5),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    /* stärkerer Glow beim Hover */ 0 0 10px currentColor,
+    0 2px 6px rgba(0, 0, 0, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.6),
     inset 0 2px 3px rgba(255, 255, 255, 0.3);
 }
 
@@ -177,26 +161,24 @@
   --led-color-base: rgb(110, 210, 255);
   /* Grundfarbe als Farbverlauf‐Layer unten drunter: */
   background-image:
-    /* Farbverlauf von heller Mitte zu etwas dunklerem Rand */
-    radial-gradient(
+    /* Farbverlauf von heller Mitte zu etwas dunklerem Rand */ radial-gradient(
       circle at 50% 50%,
       rgba(110, 210, 255, 1) 30%,
       rgba(20, 100, 140, 1) 100%
     ),
     /* Glas‐Highlight oben links */
-    radial-gradient(
-      circle at 30% 30%,
-      rgba(255, 255, 255, 0.6) 0%,
-      transparent 50%
-    );
+      radial-gradient(
+        circle at 30% 30%,
+        rgba(255, 255, 255, 0.6) 0%,
+        transparent 50%
+      );
   color: var(--led-color-base);
 }
 
 /* 2) Orange */
 .led-orange {
   --led-color-base: rgb(255, 165, 0);
-  background-image:
-    radial-gradient(
+  background-image: radial-gradient(
       circle at 50% 50%,
       rgba(255, 165, 0, 1) 30%,
       rgba(140, 80, 0, 1) 100%
@@ -212,8 +194,7 @@
 /* 3) Weiß */
 .led-white {
   --led-color-base: rgb(255, 255, 255);
-  background-image:
-    radial-gradient(
+  background-image: radial-gradient(
       circle at 50% 50%,
       rgba(255, 255, 255, 1) 30%,
       rgba(180, 180, 180, 1) 100%
@@ -224,4 +205,10 @@
       transparent 50%
     );
   color: var(--led-color-base);
+}
+
+@media screen and (max-width: 1110px) {
+  .articel-img {
+    width: 100%;
+  }
 }
