@@ -1,6 +1,6 @@
 .tv {
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .tv-img {
@@ -57,7 +57,6 @@
     background-position: 0 100px;
   }
 }
-
 
 /* running */
 .tv-laufband {

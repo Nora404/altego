@@ -66,3 +66,13 @@
   bottom: 25px;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 1110px) {
+  .top-right-deco,
+  .bottom-left-deco {
+    display: none;
+  }
+  .logo {
+    margin-left: -15px;
+  }
+}

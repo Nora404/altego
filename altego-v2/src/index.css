@@ -248,6 +248,9 @@ a.outlined-text {
 /* ----------- MEDIA ----------- */
 
 @media screen and (max-width: 1110px) {
+  :root {
+    --header-h: 100px;
+  }
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -255,10 +258,6 @@ a.outlined-text {
       "menu"
       "main"
       "footer";
-  }
-  .header-grid {
-    grid-template-columns: 50px auto;
-    grid-template-rows: 15px 60px 15px;
   }
 
   .layout-sidebar-left {
@@ -286,6 +285,8 @@ a.outlined-text {
   button {
     font-size: larger;
   }
+
+  /*Weitere Vorkommnisse: header.css */
 }
 
 /* ----------- MOBILE PANEL ----------- */
