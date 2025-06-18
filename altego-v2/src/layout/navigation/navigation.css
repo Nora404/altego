@@ -48,3 +48,10 @@
   padding-right: 1rem;
   justify-items: flex-end;
 }
+
+.mobile-entries {
+  margin: 10px 20px;
+  font-size: larger;
+  background-color: rgba(32, 56, 87, 0.699);
+  padding: 10px;
+}

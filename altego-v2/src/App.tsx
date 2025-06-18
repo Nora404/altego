@@ -10,6 +10,7 @@ import LeftSide from "./layout/sidebars/LeftSide";
 import RightSide from "./layout/sidebars/RightSide";
 import NeonSwitcher from "./layout/components/NeonSwitcher";
 import ToDownHologram from "./layout/components/ToTopHologram";
+import MobileMenu from "./layout/navigation/MobileMenu";
 
 function App() {
   const [showLeft, setShowLeft] = useState<boolean>(false);
@@ -31,7 +32,9 @@ function App() {
             <button onClick={() => setShowRight((pre) => !pre)}>
               sidebars
             </button>
-            <ToDownHologram open={showLeft}>Test1</ToDownHologram>
+            <ToDownHologram open={showLeft}>
+              <MobileMenu data={menuData} />
+            </ToDownHologram>
             <ToDownHologram open={showRight}>Test2</ToDownHologram>
           </div>
         </div>
