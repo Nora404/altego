@@ -28,7 +28,6 @@
   opacity: 0;
 }
 
-
 .hologram-wrapper {
   display: inline-flex;
   flex-direction: column;
@@ -36,9 +35,16 @@
   text-align: center;
 }
 .navigation-entries {
-    padding: 0.1rem 1rem;
-    text-align: left;
+  padding: 0.1rem 1rem;
+  text-align: left;
 }
-.navigation-entries:hover{
-    background-color: rgba(123, 195, 243, 0.4);
+.navigation-entries:hover {
+  background-color: rgba(123, 195, 243, 0.4);
+}
+
+.neon-switcher {
+  display: inline-flex;
+  gap: 1rem;
+  padding-right: 1rem;
+  justify-items: flex-end;
 }

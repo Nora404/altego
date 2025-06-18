@@ -9,6 +9,7 @@ import { menuData } from "./data/MenuData";
 import LeftSide from "./layout/sidebars/LeftSide";
 import RightSide from "./layout/sidebars/RightSide";
 import NeonSwitcher from "./layout/components/NeonSwitcher";
+import ToDownHologram from "./layout/components/ToTopHologram";
 
 function App() {
   const [showLeft, setShowLeft] = useState<boolean>(false);
@@ -23,18 +24,15 @@ function App() {
         <div className="layout-menu">
           <div id="desktop-menu">
             <Menu data={menuData} />
-            <NeonSwitcher />
           </div>
           <div id="mobile-menu">
-            <button>menu</button>
+            <button onClick={() => setShowLeft((pre) => !pre)}>menu</button>
             <button>home</button>
-            <button>sidebars</button>
-            <div id="mobile-main-menu" className="slide-panel">
-              Test1
-            </div>
-            <div id="mobile-main-sidebar" className="slide-panel">
-              Test2
-            </div>
+            <button onClick={() => setShowRight((pre) => !pre)}>
+              sidebars
+            </button>
+            <ToDownHologram open={showLeft}>Test1</ToDownHologram>
+            <ToDownHologram open={showRight}>Test2</ToDownHologram>
           </div>
         </div>
         <div className="layout-sidebar-left">
@@ -58,7 +56,10 @@ function App() {
             <RightSide />
           </div>
         </div>
-        <div className="layout-footer"></div>
+        <div className="layout-footer">
+          {" "}
+          <NeonSwitcher />
+        </div>
       </div>
     </BrowserRouter>
   );

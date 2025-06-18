@@ -179,7 +179,6 @@ a.outlined-text {
 }
 
 .neon-glow-vertical {
-  /* Vertikaler Verlauf von vollem Neon bis Transparent */
   background: linear-gradient(
     to top,
     rgba(var(--neon-rgb), 1),
@@ -188,7 +187,6 @@ a.outlined-text {
     transparent
   );
 
-  /* Mehrfacher Glow-Schein in der aktuellen Neon-Farbe */
   box-shadow: 0 0 12px rgba(var(--neon-rgb), 0.9),
     0 0 24px rgba(var(--neon-rgb), 0.6), 0 0 36px rgba(var(--neon-rgb), 0.4);
 }
@@ -259,7 +257,7 @@ a.outlined-text {
       "footer";
   }
   .header-grid {
-    grid-template-columns: 80px auto;
+    grid-template-columns: 50px auto;
     grid-template-rows: 15px 60px 15px;
   }
 
@@ -284,26 +282,27 @@ a.outlined-text {
     justify-content: space-between;
     height: 100%;
   }
+
+  button {
+    font-size: larger;
+  }
 }
 
 /* ----------- MOBILE PANEL ----------- */
 
 .slide-panel {
   position: absolute;
-  top: 40px;
+  top: 190px;
   left: 0;
-  width: calc(100% - 5px);
+  width: calc(100% - 35px);
   height: max-content;
   z-index: 50;
-  display: none;
-  background-color: #555;
-  border: 1px solid black;
-  padding: 5px;
+  padding: 5px 15px 10px 15px;
+  margin: 0;
   color: #ffffff;
 }
 
 .slide-panel.show {
-  display: block;
   animation-duration: 0.4s;
   animation-fill-mode: forwards;
 }
