@@ -29,16 +29,9 @@ const MobileMenu: React.FC<MenuProps> = ({ data }) => {
           {openTitle === title && (
             <>
               {entries.map(({ label, to }) => (
-                <div className="mobile-subentries">
-                  <NavLink
-                    key={to}
-                    to={to}
-                    className="mobile-subentry"
-                    onClick={() => setOpenTitle(null)} // Menü nach Auswahl schließen
-                  >
-                    {label}
-                  </NavLink>
-                </div>
+                <NavLink key={to} to={to} className='mobile-subentries outlined-text'>
+                  {label}
+                </NavLink>
               ))}
             </>
           )}

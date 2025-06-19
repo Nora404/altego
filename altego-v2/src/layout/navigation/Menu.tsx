@@ -16,11 +16,9 @@ const Menu: React.FC<MenuProps> = ({ data }) => (
                 panelWidth={180}
             >
                 {entries.map(({ label, to }) => (
-                    <div className='navigation-entries'>
-                        <NavLink key={to} to={to} className='outlined-text'>
-                            {label}<br />
-                        </NavLink>
-                    </div>
+                    <NavLink key={to} to={to} className='navigation-entries outlined-text'>
+                        {label}
+                    </NavLink>
                 ))}
             </HologramPanel>
         ))}
