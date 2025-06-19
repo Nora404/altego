@@ -14,7 +14,7 @@ const MobileMenu: React.FC<MenuProps> = ({ data }) => {
   };
 
   return (
-    <div className="mobile-menu">
+    <div className="mobile-menu-scrollbox">
       <div className="mobile-entries">Login</div>
       <div className="mobile-entries">Register</div>
       <div className="mobile-entries">Sprache (DE)</div>
@@ -24,12 +24,14 @@ const MobileMenu: React.FC<MenuProps> = ({ data }) => {
           <div className="mobile-entries" onClick={() => toggle(title)}>
             {title}
           </div>
-
-          {/* ▼ zeigt nur, wenn offen */}
           {openTitle === title && (
             <>
               {entries.map(({ label, to }) => (
-                <NavLink key={to} to={to} className='mobile-subentries outlined-text'>
+                <NavLink
+                  key={to}
+                  to={to}
+                  className="mobile-subentries outlined-text"
+                >
                   {label}
                 </NavLink>
               ))}
@@ -41,5 +43,6 @@ const MobileMenu: React.FC<MenuProps> = ({ data }) => {
     </div>
   );
 };
+
 
 export default MobileMenu;
