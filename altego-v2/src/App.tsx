@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import { Suspense, useState } from "react";
 import { routes } from "./routing";
 
@@ -29,7 +29,7 @@ function App() {
 
             <div className="flex-row">
               <button onClick={() => setShowMenu((pre) => !pre)}>menu</button>
-              <button>home</button>
+              <NavLink to="/" className="outlined-text"><button>home</button></NavLink>
             </div>
 
             <div className="flex-row">

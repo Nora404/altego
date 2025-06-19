@@ -79,7 +79,5 @@
 }
 
 .mobile-menu-scrollbox {
-  max-height: calc(100vh - 3rem); /* etwas weniger als Bildschirmhöhe, falls du Buttons etc. hast */
   overflow-y: auto;
-  padding: 0.5rem;
 }
