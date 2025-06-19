@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface ToDownHologramProps {
     open: boolean;
@@ -12,29 +12,11 @@ export default function ToDownHologram({
     children,
     isFloating = true,
 }: Readonly<ToDownHologramProps>) {
-    const ref = useRef<HTMLDivElement>(null);
-    const [maxHeight, setMaxHeight] = useState(0);
-
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
-        setMaxHeight(open ? el.scrollHeight : 0);
-    }, [open, children]);
-
     const posClass = isFloating
         ? "position-down--floating"
         : "position-down--inline";
-
     return (
-        <div
-            ref={ref}
-            className={`hologram-bg ${posClass}`}
-            style={{
-                maxHeight,
-                transition: "max-height 0.35s ease",
-                overflow: "hidden",
-            }}
-        >
+        <div className={`hologram-bg ${posClass} ${open ? "is-open" : ""}`}>
             <hr className="neon-blue" />
             {children}
         </div>

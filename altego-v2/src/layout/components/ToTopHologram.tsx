@@ -11,78 +11,50 @@ export default function ToDownHologram({
   children,
   isFloating = true,
 }: Readonly<ToDownHologramProps>) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [maxHeight, setMaxHeight] = useState<string | number>("max-content");
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState<number | string>(0);
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useLayoutEffect(() => {
-    const el = ref.current;
-    if (!el || !open) return;
-
-    const observer = new ResizeObserver(() => {
-      requestAnimationFrame(() => {
-        if (ref.current) {
-          setMaxHeight(ref.current.scrollHeight);
-        }
-      });
-    });
-
-    observer.observe(el);
-
-    return () => observer.disconnect();
-  }, [open]);
-
-  // Initiale Messung nach Bild-Load
-  useLayoutEffect(() => {
-    const el = ref.current;
+    const el = containerRef.current;
     if (!el) return;
 
-    if (!hasAnimated && open) {
-      const imgs = Array.from(el.querySelectorAll("img")) as HTMLImageElement[];
-      let imagesToLoad = imgs.filter((img) => !img.complete).length;
+    // Helper to update height
+    const update = () => {
+      setMaxHeight(open ? el.scrollHeight : 0);
+      if (open && !hasAnimated) setHasAnimated(true);
+    };
 
-      const onOneLoaded = () => {
-        imagesToLoad--;
-        if (imagesToLoad <= 0) {
-          requestAnimationFrame(() => {
-            setMaxHeight(el.scrollHeight);
-            setHasAnimated(true);
-          });
-        }
-      };
+    // Observe size changes
+    const observer = new ResizeObserver(() => requestAnimationFrame(update)); // 🔥 unified observer
+    observer.observe(el);
 
-      if (imagesToLoad === 0) {
-        requestAnimationFrame(() => {
-          setMaxHeight(el.scrollHeight);
-          setHasAnimated(true);
-        });
-      } else {
-        imgs.forEach((img) => {
-          if (!img.complete) {
-            img.addEventListener("load", onOneLoaded, { once: true });
-          }
-        });
-      }
-
-      return;
+    // Initial measure, including images
+    update();
+    const images = Array.from(el.querySelectorAll("img")) as HTMLImageElement[];
+    let remaining = images.filter(img => !img.complete).length;
+    if (remaining > 0) {
+      images.forEach(img => {
+        if (!img.complete) img.addEventListener("load", () => {
+          if (--remaining === 0) requestAnimationFrame(update);
+        }, { once: true });
+      });
     }
 
-    if (!open) {
-      setMaxHeight(0);
-    }
-  }, [open, hasAnimated]);
+    return () => observer.disconnect();
+  }, [open]); // 🔥 single effect
 
-  const posClass = isFloating
+  const positionClass = isFloating
     ? "position-down--floating"
     : "position-down--inline";
 
   return (
     <div
-      ref={ref}
-      className={`hologram-bg ${posClass}`}
+      ref={containerRef}
+      className={`hologram-bg ${positionClass}`}
       style={{
         maxHeight,
-        transition: hasAnimated ? "max-height 0.35s ease" : "none",
+        transition: hasAnimated ? "max-height 0.35s ease" : "none", // 🔥 delay transition until first animation
         overflow: "hidden",
         width: "100%",
       }}

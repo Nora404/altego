@@ -4,9 +4,10 @@ import type { MenuItem } from "../../data/MenuData";
 
 interface MenuProps {
   data: readonly MenuItem[];
+  onClose?: () => void;
 }
 
-const MobileMenu: React.FC<MenuProps> = ({ data }) => {
+const MobileMenu: React.FC<MenuProps> = ({ data, onClose }) => {
   const [openTitle, setOpenTitle] = useState<string | null>(null);
 
   const toggle = (title: string) => {
@@ -15,10 +16,6 @@ const MobileMenu: React.FC<MenuProps> = ({ data }) => {
 
   return (
     <div className="mobile-menu-scrollbox">
-      <div className="mobile-entries">Login</div>
-      <div className="mobile-entries">Register</div>
-      <div className="mobile-entries">Sprache (DE)</div>
-      <hr />
       {data.map(({ title, entries }) => (
         <div key={title}>
           <div className="mobile-entries" onClick={() => toggle(title)}>
@@ -31,6 +28,7 @@ const MobileMenu: React.FC<MenuProps> = ({ data }) => {
                   key={to}
                   to={to}
                   className="mobile-subentries outlined-text"
+                  onClick={onClose}
                 >
                   {label}
                 </NavLink>

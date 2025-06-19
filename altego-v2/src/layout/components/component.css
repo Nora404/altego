@@ -86,7 +86,16 @@
     transparent 100%
   );
   animation: vShift 15s linear infinite;
+
+  overflow-y: auto;                   
+  max-height: 0;                       
+  transition: max-height 0.35s ease;
 }
+
+.hologram-bg.is-open {
+  max-height: 90vh;                    
+}
+
 
 /* Position Down (öffnet nach unten) */
 .position-down--floating {

@@ -13,8 +13,7 @@ import ToDownHologram from "./layout/components/ToTopHologram";
 import MobileMenu from "./layout/navigation/MobileMenu";
 
 function App() {
-  const [showLeft, setShowLeft] = useState<boolean>(false);
-  const [showRight, setShowRight] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (
     <BrowserRouter>
@@ -27,15 +26,21 @@ function App() {
             <Menu data={menuData} />
           </div>
           <div id="mobile-menu">
-            <button onClick={() => setShowLeft((pre) => !pre)}>menu</button>
-            <button>home</button>
-            <button onClick={() => setShowRight((pre) => !pre)}>
-              sidebars
-            </button>
-            <ToDownHologram open={showLeft}>
-              <MobileMenu data={menuData} />
+
+            <div className="flex-row">
+              <button onClick={() => setShowMenu((pre) => !pre)}>menu</button>
+              <button>home</button>
+            </div>
+
+            <div className="flex-row">
+              <button>DE</button>
+              <button>Login</button>
+            </div>
+
+            <ToDownHologram open={showMenu}>
+              <MobileMenu data={menuData} onClose={() => setShowMenu(false)} />
             </ToDownHologram>
-            <ToDownHologram open={showRight}>Test2</ToDownHologram>
+
           </div>
         </div>
         <div className="layout-sidebar-left">
