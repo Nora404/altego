@@ -9,7 +9,6 @@ import { menuData } from "./data/MenuData";
 import LeftSide from "./layout/sidebars/LeftSide";
 import RightSide from "./layout/sidebars/RightSide";
 import NeonSwitcher from "./layout/components/NeonSwitcher";
-import ToDownHologram from "./layout/components/ToTopHologram";
 import MobileMenu from "./layout/navigation/MobileMenu";
 
 function App() {
@@ -37,9 +36,7 @@ function App() {
               <button>Login</button>
             </div>
 
-            <ToDownHologram open={showMenu}>
-              <MobileMenu data={menuData} onClose={() => setShowMenu(false)} />
-            </ToDownHologram>
+            <MobileMenu open={showMenu} data={menuData} onClose={() => setShowMenu(false)} />
 
           </div>
         </div>

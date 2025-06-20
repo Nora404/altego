@@ -4,10 +4,11 @@ import type { MenuItem } from "../../data/MenuData";
 
 interface MenuProps {
   data: readonly MenuItem[];
+  open: boolean;
   onClose?: () => void;
 }
 
-const MobileMenu: React.FC<MenuProps> = ({ data, onClose }) => {
+const MobileMenu: React.FC<MenuProps> = ({ data, onClose, open }) => {
   const [openTitle, setOpenTitle] = useState<string | null>(null);
 
   const toggle = (title: string) => {
@@ -15,32 +16,35 @@ const MobileMenu: React.FC<MenuProps> = ({ data, onClose }) => {
   };
 
   return (
-    <div className="mobile-menu-scrollbox">
-      {data.map(({ title, entries }) => (
-        <div key={title}>
-          <div className="mobile-entries" onClick={() => toggle(title)}>
-            {title}
+    <div className={`hologram-bg position-down--floating ${open ? "is-open" : ""}`}>
+      <hr className="neon-blue" />
+      <div className="mobile-menu-scrollbox">
+        {data.map(({ title, entries }) => (
+          <div key={title}>
+            <div className="mobile-entries" onClick={() => toggle(title)}>
+              {title}
+            </div>
+            {openTitle === title && (
+              <>
+                {entries.map(({ label, to }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    className="mobile-subentries outlined-text"
+                    onClick={onClose}
+                  >
+                    {label}
+                  </NavLink>
+                ))}
+              </>
+            )}
           </div>
-          {openTitle === title && (
-            <>
-              {entries.map(({ label, to }) => (
-                <NavLink
-                  key={to}
-                  to={to}
-                  className="mobile-subentries outlined-text"
-                  onClick={onClose}
-                >
-                  {label}
-                </NavLink>
-              ))}
-            </>
-          )}
-        </div>
-      ))}
-      <hr />
+        ))}
+        <hr className="neon-blue" />
+      </div>
     </div>
   );
-};
+}
 
 
 export default MobileMenu;
