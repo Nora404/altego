@@ -75,4 +75,7 @@
   .logo {
     margin-left: -15px;
   }
+  .bottom-bar{
+    height: 5px;
+  }
 }

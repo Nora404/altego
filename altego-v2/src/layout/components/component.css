@@ -40,6 +40,8 @@
   font-weight: bold;
 }
 
+/* ----------- ARTICEL ----------- */
+
 .articel {
   margin-bottom: 2rem;
 }
@@ -62,6 +64,23 @@
 .articel-content {
   padding-left: 1rem;
 }
+
+@media screen and (max-width: 1110px) {
+  .articel-img {
+    width: 100%;
+  }
+  
+  .articel-header {
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 15px 15px 0 0;
+}
+.articel-content {
+  padding-left: 0;
+}
+}
+
+/* ----------- HOLO ----------- */
 
 .hologram-bg {
   color: #ffffff;
@@ -215,8 +234,3 @@
   color: var(--led-color-base);
 }
 
-@media screen and (max-width: 1110px) {
-  .articel-img {
-    width: 100%;
-  }
-}

@@ -108,3 +108,10 @@
     border-bottom: 2px solid var(--neon);
   border-right: 2px solid var(--neon);
 }
+
+
+@media screen and (max-width: 1110px) {
+.content {
+  padding: 5px;
+}
+}

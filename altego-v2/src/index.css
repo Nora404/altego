@@ -277,6 +277,7 @@ a.outlined-text {
 
   .layout-main {
     margin: 0 5px;
+    padding: 2px;
   }
 
   #desktop-menu {
@@ -288,13 +289,14 @@ a.outlined-text {
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    border-bottom: 5px solid black;
   }
 
   button {
     font-size: larger;
   }
 
-  /*Weitere Vorkommnisse: header.css, component.css */
+  /*Weitere Vorkommnisse: header.css, component.css, content.css */
 }
 
 /* ----------- MOBILE PANEL ----------- */
