@@ -80,4 +80,5 @@
 
 .mobile-menu-scrollbox {
   overflow-y: auto;
+  /* height: 90vh; */ /*Notlösung*/
 }

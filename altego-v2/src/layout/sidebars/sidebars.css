@@ -68,7 +68,7 @@
 
 .buy-banner {
   position: absolute;
-  bottom: 0;
+  bottom: 20%;
   left: 0;
 
   /* genug Länge, damit die Diagonale den Container komplett schneidet   */
