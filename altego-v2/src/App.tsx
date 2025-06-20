@@ -28,7 +28,7 @@ function App() {
 
             <div className="flex-row">
               <button onClick={() => setShowMenu((pre) => !pre)}>menu</button>
-              <NavLink to="/" className="outlined-text"><button>home</button></NavLink>
+              <NavLink to="/home" className="outlined-text"><button>home</button></NavLink>
             </div>
 
             <div className="flex-row">

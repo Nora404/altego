@@ -1,5 +1,5 @@
 import data from "../../../Data/NewsData.json";
-import ArticelList from "../../../layout/components/Articel";
+import ArticelList from "../Articel";
 
 
 const News = () => {

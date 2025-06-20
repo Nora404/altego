@@ -81,6 +81,10 @@ a.outlined-text {
   font-weight: bold;
   text-decoration: none;
 }
+h2 {
+  margin: 0;
+  text-align: center;
+}
 
 /* ----------- LAYOUT GRID ----------- */
 .grid-container {
@@ -156,6 +160,12 @@ a.outlined-text {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+.flex-row-end{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .sidebar-left {

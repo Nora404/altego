@@ -65,14 +65,22 @@
   padding-left: 1rem;
 }
 
+.articel-preview-date {
+  font-size: 0.8rem;
+  color: #888;
+  background-color: black;
+}
+.articel-preview-title {
+  margin-bottom: 0.6rem;
+}
+
 @media screen and (max-width: 1110px) {
   .articel-img {
     width: 100%;
   }
   
   .articel-header {
-  font-size: 1rem;
-  padding: 1rem;
+  padding: 0.3rem 1rem;
   border-radius: 15px 15px 0 0;
 }
 .articel-content {
