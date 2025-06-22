@@ -3,14 +3,6 @@ import { Plattform } from "./Plattform";
 const RightSide = () => {
     return (
         <div>
-            {/* <Plattform title="Logindata">
-                <div>
-                    Nora404<br />
-                    Edit Profile
-
-                </div>
-            </Plattform> */}
-
             <Plattform title="Community">
                 <p>Users: 366141<br />
                     Logged in: 12</p>
