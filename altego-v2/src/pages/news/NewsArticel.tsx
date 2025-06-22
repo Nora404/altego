@@ -3,6 +3,7 @@ import DOMPurify from 'dompurify';
 import type { NewsArticel } from '../../layout/components/articel/NewsArticelList';
 import { useParams } from 'react-router-dom';
 import data from '../../Data/NewsData.json';
+import comments from '../../Data/CommentsData.json';
 import Button from '../../layout/components/Button';
 
 export default function NewsArticle() {
@@ -10,6 +11,11 @@ export default function NewsArticle() {
     const post: NewsArticel | undefined = data.find((p) => p.id === id);
 
     if (!post) return <div>Artikel nicht gefunden</div>;
+
+    const relatedComments = comments
+        .filter(comment => comment.newsId === id)
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // Neueste zuerst
+
 
     const sanitizedHTML = DOMPurify.sanitize(post.newsText, {
         ALLOWED_TAGS: ['b', 'i', 'br', 'p', 'ul', 'li', 'a', 'strong'],
@@ -34,6 +40,39 @@ export default function NewsArticle() {
                 </div>
                 <Button to={`/news`}>zu den News</Button>
             </div>
+
+            <p>{" "}</p><p>{" "}</p>
+            <div className='articel-header'>Kommentare</div>
+            <hr className='neon-orange' />
+            {relatedComments.map(comment => (
+                <div key={comment.id} className="comment">
+                    <div className="comment-header">
+                        <img src={comment.img} alt={comment.name} className="comment-avatar" />
+                        <div>
+                            <strong>{comment.name}</strong>
+                            <div className="comment-date">
+                                {new Date(comment.date).toLocaleString('de-DE', {
+                                    weekday: 'short',
+                                    day: '2-digit',
+                                    month: 'short',
+                                    year: '2-digit',
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        className="comment-text"
+                        dangerouslySetInnerHTML={{
+                            __html: DOMPurify.sanitize(comment.text, {
+                                ALLOWED_TAGS: ['br']
+                            })
+                        }}
+                    />
+                    <hr className="neon-orange" />
+                </div>
+            ))}
         </div>
     );
 }

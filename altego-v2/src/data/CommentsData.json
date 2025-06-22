@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "newsId": "100425a",
+        "name": "John Doe",
+        "img": "/users/user0000.png",
+        "date": "2025-04-11T14:37:00Z",
+        "text": "Ich hoffe es gibt eine neutrale Botschaft mit Botschafter.<br/>Und die eigenen Spione am HQ mit Dal als Berater :wink:"
+    },
+    {
+        "id": 2,
+        "newsId": "100425a",
+        "name": "Lisa Simson",
+        "img": "/users/user0000.png",
+        "date": "2025-04-12T12:37:00Z",
+        "text": "Würde ich auch so bevorzugen :D"
+    },
+    {
+        "id": 3,
+        "newsId": "280325a",
+        "name": "Schwarzes Loch",
+        "img": "/users/user0000.png",
+        "date": "2025-04-14T10:20:00Z",
+        "text": "1000 Dinge die die Welt nicht braucht... aber jeder sollte halt Trump oder Musk spielen können...<br><br> Wichtiger als Diplomatie wäre es endlich die Xenon wieder zu alter Stärke zu führen..."
+    },
+    {
+        "id": 4,
+        "newsId": "260325a",
+        "name": "Alice Johnson",
+        "img": "/users/user0000.png",
+        "date": "2025-04-20T09:15:00Z",
+        "text": "Also ich hoffe doch, das EGO das mit dem Diplomatie-Update gerade erfüllt, das Fraktionen sich an den Hals gehen, wenn der kleine Usopator sie auf hetzt. Klappt doch im wahren Leben auch prima 8) :shock:"
+    }
+]
