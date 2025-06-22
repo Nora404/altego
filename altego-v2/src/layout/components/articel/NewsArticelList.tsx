@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Button from "../Button";
 
 // Typisierung für einen einzelnen Post
 export type NewsArticel = {
@@ -54,9 +54,7 @@ const NewsArticelItem: React.FC<{ post: NewsArticel }> = ({ post }) => {
         <div>
           Autor: {post.autor} · {post.comments} Kommentare
         </div>
-        <NavLink to={`/article/${post.id}`} className='outlined-text'>
-          <button>weiter lesen</button>
-        </NavLink>
+        <Button to={`/article/${post.id}`}>weiter lesen</Button>
       </div>
     </div>
   );

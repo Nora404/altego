@@ -1,8 +1,9 @@
 
 import DOMPurify from 'dompurify';
 import type { NewsArticel } from '../../layout/components/articel/NewsArticelList';
-import { NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import data from '../../Data/NewsData.json';
+import Button from '../../layout/components/Button';
 
 export default function NewsArticle() {
     const { id } = useParams();
@@ -31,9 +32,7 @@ export default function NewsArticle() {
                 <div>
                     Autor: {post.autor} · {post.comments} Kommentare
                 </div>
-                <NavLink to={`/news`} className='outlined-text'>
-                    <button>zurück</button>
-                </NavLink>
+                <Button to={`/news`}>zu den News</Button>
             </div>
         </div>
     );

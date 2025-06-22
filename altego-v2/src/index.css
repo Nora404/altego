@@ -46,11 +46,12 @@ hr {
   border: none;
 }
 
-button {
+button, .button {
   background: transparent;
   border: 1px solid var(--neon);
   color: var(--neon);
-  padding: 0.5rem 1rem;
+  text-decoration: none;
+  padding: 0.2rem 1rem;
   margin: 0 0.5rem;
   border-radius: 4px;
   transition: all 0.2s ease;
@@ -60,7 +61,7 @@ button {
   gap: 0.5rem;
   height: 35px;
 }
-button:hover {
+button:hover, .button:hover {
   color: #ffffff;
   text-shadow: 0 0 4px var(--neon), 0 0 8px var(--neon), 0 0 12px var(--neon);
   box-shadow: 0 0 4px var(--neon), 0 0 10px var(--neon);
@@ -324,7 +325,7 @@ h2 {
     border-bottom: 5px solid black;
   }
 
-  button {
+  button, .button {
     font-size: larger;
   }
 
