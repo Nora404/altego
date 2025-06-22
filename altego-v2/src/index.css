@@ -171,6 +171,12 @@ h2 {
   align-items: center;
   justify-content: flex-end;
 }
+.flex-row-top{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 
 .sidebar-left {
   position: sticky;

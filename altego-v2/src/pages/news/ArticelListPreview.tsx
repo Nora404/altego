@@ -19,12 +19,13 @@ const ArticelListPreview: React.FC<ArticelListPreviewProps> = ({ data }) => {
         <>
             {data.slice(0, 3).map(({ date, title }, index) => (
                 <div key={index}>
-                    <div className="articel-preview-date">{date}</div>
-                    <div className="flex-row">
-                        <div className="articel-preview-title">{title}</div>
-                        <div>Artikel lesen</div>
+                    <div className="articel-preview-date">
+                        {date}
                     </div>
-
+                    <div className="flex-row-top">
+                        <div className="articel-preview-title">{title}</div>
+                        <div className="articel-button"><button>Artikel lesen</button></div>
+                    </div>
                 </div>
             ))}
         </>

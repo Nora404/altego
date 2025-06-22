@@ -7,7 +7,7 @@ export type MenuItem = {
 
 export const menuData = [
     {
-        title: 'Start',
+        title: 'News',
         entries: [
             { label: 'Übersicht', to: '/home' },
             { label: 'Aktuell', to: '/news' },
