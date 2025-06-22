@@ -3,17 +3,18 @@ import { Plattform } from "./Plattform";
 const RightSide = () => {
     return (
         <div>
-            <Plattform title="Logindata">
+            {/* <Plattform title="Logindata">
                 <div>
                     Nora404<br />
                     Edit Profile
 
                 </div>
-            </Plattform>
+            </Plattform> */}
 
             <Plattform title="Community">
-                Users: 366141<br />
-                Logged in: 12
+                <p>Users: 366141<br />
+                    Logged in: 12</p>
+                <img src="/ui/community.png" className="girl" alt="girl" />
             </Plattform>
 
             <Plattform title="Neuster Screenshot">

@@ -93,3 +93,16 @@
   background: rgba(255, 0, 0, 0.75);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
+
+.girl{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  opacity: 0.8;
+}
+@media screen and (max-width: 1600px) {
+ .girl {
+    display: none;
+  } 
+}
