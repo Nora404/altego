@@ -1,20 +1,11 @@
 import React from "react";
+import type { NewsArticel } from "./NewsArticelList";
 
-// Der Typ bleibt gleich
-type Articel = {
-    date: string;
-    title: string;
-    comments: number;
-    img: string;
-    autor: string;
-    shortText: string;
+type NewsArticelListPreviewProps = {
+    data: NewsArticel[];
 };
 
-type ArticelListPreviewProps = {
-    data: Articel[];
-};
-
-const ArticelListPreview: React.FC<ArticelListPreviewProps> = ({ data }) => {
+const NewsArticelListPreview: React.FC<NewsArticelListPreviewProps> = ({ data }) => {
     return (
         <>
             {data.slice(0, 3).map(({ date, title }, index) => (
@@ -32,4 +23,4 @@ const ArticelListPreview: React.FC<ArticelListPreviewProps> = ({ data }) => {
     );
 };
 
-export default ArticelListPreview;
+export default NewsArticelListPreview;

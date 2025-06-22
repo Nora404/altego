@@ -1,26 +1,32 @@
 [
   {
+    "id": "100425a",
     "date": "10.Apr.25",
     "title": "X4 Diplomatie-Update kommt 2025!",
     "comments": 57,
     "img": "/images/news_2022_03_31_272.png",
     "autor": "Gregory",
-    "shortText": "Das kostenlose Diplomatie-Update für X4: Foundations erweitert das Spiel um strategische Möglichkeiten wie Botschaften und Agenten. Spieler können dadurch aktiv in die interstellare Politik eingreifen, Allianzen schmieden und Rivalitäten verstärken. Weitere Details folgen mit der Veröffentlichung"
+    "shortText": "Es freut uns, euch mitteilen zu können, dass das Update 7.60 für X4: Foundations jetzt live ist! Es handelt sich um ein rein technisches Update mit Fokus auf der Verbesserung der Videospeicherverwaltung sowie einer Reihe von Fehlerbehebungen und Optimierungen zur Verbesserung der Stabilität und Gesamtleistung. Dieses Update enthält zwar keine neuen Gameplay-Features, aber die Änderungen hinter den Kulissen machen euer Spielerlebnis flüssiger und zuverlässiger.",
+    "newsText": "<b>🛠️ Ein paar Worte zu den Änderungen</b><br>Eine der wesentlichen Verbesserungen in 7.60 ist die Art, wie das Spiel den GPU-Speicher einsetzt, damit es auch auf schwächeren Systemen wie dem Steam Deck besser läuft. So kommt es seltener vor, dass das Spiel langsam läuft oder wegen zu wenig GPU-Speicher nicht weiterläuft. Ein möglicher Nebeneffekt für einige Spieler kann ein etwas langsameres Laden von Assets wie Schiffsteilen oder Charakteren sein. Sollte dies bei dir auftreten, kannst du versuchen, die Texturqualität auf 'Mittel' zu senken oder 'Volumetrischer Nebel' in den Grafikeinstellungen zu deaktivieren. Diese Optionen haben eher geringe Auswirkungen auf die Grafik des Spiels, können aber viel GPU-Speicher freigeben!<br><br>Wie immer möchten wir uns bei allen bedanken, die bei der öffentlichen Beta mitgemacht und uns Feedback gegeben haben. Eure Rückmeldungen helfen uns dabei, X4 bestens in Schuss zu halten."
   },
   {
+    "id": "280325a",
     "date": "28.Mar.25",
     "title": "X4 ist am 10. April bei der Triple-I Initiative dabei!",
     "comments": 0,
     "img": "/images/news_2025_03_21_333.png",
     "autor": "Gregory",
-    "shortText": "Am 10. April um 18:00 Uhr gibt X4: Foundations im Rahmen der Triple-I Initiative Showcase einen Ausblick auf kommende Inhalte. Die 45-minütige Show präsentiert über 30 Spiele mit Premieren, Gameplay und Release-Terminen – ganz ohne Werbung oder Moderation. Den Livestream gibt’s auf YouTube, Twitch und der Steam-Startseite"
+    "shortText": "Macht euch bereit, mit dem kommenden Diplomatie-Update für X4: Foundations durch die komplexe Landschaft der interstellaren Politik zu navigieren.",
+    "newsText": "<a href='https://www.youtube.com/watch?v=o6IMHh0d4W8' target='_blank' class='news_link'>> TRAILER <<</a><br><br>Das kostenlose Basisspiel-Update führt neue strategische Elemente ein, die es euch ermöglichen, Diplomatie ganz neu zu erleben. Im Mittelpunkt des Updates steht die Botschaft, eine neue Einrichtung, in der Diplomaten zusammengebracht werden können, um ihre Fraktionen zu vertreten. Ihr erhaltet zudem Zugang zu Agenten, die ihr für unabhängige Aufträge einsetzen könnt, um diplomatische Ziele im X-Universum zu erreichen. Mit diesen neuen Tools könnt ihr Allianzen und Rivalitäten gleichermaßen beeinflussen und das politische und wirtschaftliche Gleichgewicht der Galaxie gestalten.<br><br>Bleibt dran für weitere Details, wenn die Veröffentlichung näher rückt!"
   },
   {
+    "id": "260325a",
     "date": "26.Mar.25",
     "title": "X4: Foundations Öffentliche Beta 7.60 startet jetzt!",
     "comments": 5,
     "img": "/images/news_2025_04_03_334.png",
     "autor": "Gregory",
-    "shortText": "Die öffentliche Beta 7.60 für X4: Foundations ist ab sofort verfügbar und konzentriert sich auf technische Verbesserungen, insbesondere bei der Videospeicherverwaltung, sowie auf Stabilitäts- und Performance-Fixes. Neue Gameplay-Features sind nicht enthalten – das Update dient der Optimierung des Spielerlebnisses. Wer teilnehmen möchte, findet alle Infos und Anleitungen im offiziellen Forum von Egosoft."
+    "shortText": "Wir freuen uns, euch einen Einblick in die Zukunft von X4 während der Triple-I Initiative Showcase am 10. April um 18:00 Uhr zu geben!",
+    "newsText": "Die Veranstaltung wird Ankündigungen zu über 30 Spielen bieten, darunter Weltpremieren, Gameplay-Enthüllungen, Veröffentlichungsdaten und mehr – alles in nur 45 Minuten. Keine Moderatoren, keine Werbung, keine Sponsoren – nur Spiele!<br><br>📺 <b>Schaut die Show live auf:</b><br>🔹 <a href='https://www.youtube.com/@iii_initiative' target='_blank' class='news_link'>YouTube</a><br>🔹 <a href='https://www.twitch.tv/iii_initiative' target='_blank' class='news_link'>Twitch</a><br>🔹 Oder direkt auf der <a href='https://store.steampowered.com/' target='_blank' class='news_link'>Steam-Startseite</a><br><br>🎥 Verschafft euch einen Vorgeschmack auf das Event mit dem <a href='https://www.youtube.com/watch?v=TOK8wOLxl68' target='_blank' class='news_link'>offiziellen Trailer</a>. Weitere Informationen findet ihr auf <a href='https://iii-initiative.com/' target='_blank' class='news_link'>iii-initiative.com</a>.<br><br>Wir freuen uns darauf, euch mehr zu zeigen - bis bald! 🚀"
   }
 ]

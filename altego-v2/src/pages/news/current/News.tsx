@@ -1,10 +1,9 @@
 import data from "../../../Data/NewsData.json";
-import ArticelList from "../Articel";
-
+import NewsArticelList from "../../../layout/components/articel/NewsArticelList";
 
 const News = () => {
     return (
-        <ArticelList data={data} />
+        <NewsArticelList data={data} />
     );
 };
 

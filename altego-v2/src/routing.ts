@@ -4,6 +4,7 @@ export const routes = [
     { path: '/', name: 'Home', component: lazy(() => import('./pages/home/Home')) },
     { path: '/home', name: 'MobileHome', component: lazy(() => import('./pages/home/Home')) },
     { path: '/news', name: 'News', component: lazy(() => import('./pages/news/current/News')) },
+    { path: '/article/:id', name: 'Articel', component: lazy(() => import('./pages/news/NewsArticel')) },
     { path: '/news/archiv', name: 'Archiv', component: lazy(() => import('./pages/news/archiv/Archiv')) },
     // …weitere einfach anhängen
 ] as const;

@@ -1,5 +1,5 @@
 import data from "../../Data/NewsData.json";
-import ArticelListPreview from "../news/ArticelListPreview";
+import NewsArticelListPreview from "../../layout/components/articel/NewsArticelListPreview";
 
 const Home = () => {
     return (
@@ -23,7 +23,7 @@ const Home = () => {
 
             <div className="articel-header">Neuste News</div>
             <hr className="neon-orange" />
-            <ArticelListPreview data={data} /><br />
+            <NewsArticelListPreview data={data} /><br />
 
             <div className="only-mobile">
                 <div className="articel-header">Community</div>

@@ -1,30 +1,33 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 // Typisierung für einen einzelnen Post
-type Articel = {
+export type NewsArticel = {
+  id: string;
   date: string;
   title: string;
   comments: number;
   img: string;
   autor: string;
   shortText: string;
+  newsText: string;
 };
 
-type ArticelList = {
-  data: Articel[];
+type NewsArticelList = {
+  data: NewsArticel[];
 };
 
-const ArticelList: React.FC<ArticelList> = ({ data }) => {
+const NewsArticelList: React.FC<NewsArticelList> = ({ data }) => {
   return (
     <div className="space-y-8">
       {data.map((post, index) => (
-        <ArticelItem key={index} post={post} />
+        <NewsArticelItem key={index} post={post} />
       ))}
     </div>
   );
 };
 
-const ArticelItem: React.FC<{ post: Articel }> = ({ post }) => {
+const NewsArticelItem: React.FC<{ post: NewsArticel }> = ({ post }) => {
   return (
     <div className="articel">
       {/* Header */}
@@ -47,14 +50,16 @@ const ArticelItem: React.FC<{ post: Articel }> = ({ post }) => {
       </div>
 
       {/* Footer */}
-      <div className="flex-row-between">
+      <div className="flex-row">
         <div>
           Autor: {post.autor} · {post.comments} Kommentare
         </div>
-        <a>weiter lesen</a>
+        <NavLink to={`/article/${post.id}`} className='outlined-text'>
+          <button>weiter lesen</button>
+        </NavLink>
       </div>
     </div>
   );
 };
 
-export default ArticelList;
+export default NewsArticelList;
