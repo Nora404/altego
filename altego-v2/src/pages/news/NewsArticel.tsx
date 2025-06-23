@@ -48,6 +48,10 @@ export default function NewsArticle() {
             <p className='spaceY' style={{ color: "transparent" }}>.</p>
             <div className='articel-header'>Kommentare</div>
             <hr className='neon-orange' />
+            <div className='flex-row-end'
+                style={{ color: "gray", padding: "0.1rem" }}>
+                [&#9660;] [&#9650;]
+            </div>
 
             {relatedComments.length === 0 && (
                 <div style={{ marginTop: "1rem" }}>Keine Kommentare vorhanden.</div>)}
