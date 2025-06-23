@@ -49,6 +49,9 @@ export default function NewsArticle() {
             <div className='articel-header'>Kommentare</div>
             <hr className='neon-orange' />
 
+            {relatedComments.length === 0 && (
+                <div style={{ marginTop: "1rem" }}>Keine Kommentare vorhanden.</div>)}
+
             {relatedComments.map(comment => (
                 <div key={comment.id} className="comment">
                     <div className="comment-header">
@@ -71,7 +74,7 @@ export default function NewsArticle() {
                         className="comment-text"
                         dangerouslySetInnerHTML={{
                             __html: DOMPurify.sanitize(comment.text, {
-                                ALLOWED_TAGS: ['br']
+                                ALLOWED_TAGS: ['br', 'p', 'strong', 'b', 'i', 'em', 'a'],
                             })
                         }}
                     />
