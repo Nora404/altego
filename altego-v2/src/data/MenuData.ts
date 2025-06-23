@@ -17,10 +17,11 @@ export const menuData = [
     {
         title: 'Spiele',
         entries: [
-            { label: 'X4', to: '/games/x4' },
-            { label: 'X3', to: '/games/x3' },
-            { label: 'X2', to: '/games/x2' },
-            { label: 'X', to: '/games/x' },
+            { label: 'X4 Foundations', to: '/games/x4' },
+            { label: 'X Rebirth', to: '/games/x1' },
+            { label: 'X3 Reunion', to: '/games/x3' },
+            { label: 'X2 Die Bedrohung', to: '/games/x2' },
+            { label: 'X BtF', to: '/games/x1' },
         ],
     },
     {

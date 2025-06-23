@@ -16,7 +16,7 @@ export default function ChevronBtn({
 }: Readonly<ChevronBtnProps>) {
 
     return (
-        <button onClick={onClick}>
+        <button onClick={onClick} style={{ fontSize: "1em" }} className="chevron-btn">
             {chevron && <ChevronIcon open={open} />}
             {title}
         </button>
