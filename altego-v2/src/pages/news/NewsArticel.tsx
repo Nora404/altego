@@ -34,16 +34,21 @@ export default function NewsArticle() {
 
             <hr className='neon-orange spaceY' />
 
-            <div className="flex-row">
+            <div className="toggleRowToColumn">
                 <div>
                     Autor: {post.autor} · {post.comments} Kommentare
                 </div>
-                <Button to={`/news`}>zu den News</Button>
+                <div className="toggleRowToColumn">
+                    <Button to={`/home`}>Kommentieren</Button>
+                    <Button to={`/news`}>zu den News</Button>
+                    <Button to={`/home`}>zum Start</Button>
+                </div>
             </div>
 
-            <p>{" "}</p><p>{" "}</p>
+            <p className='spaceY' style={{ color: "transparent" }}>.</p>
             <div className='articel-header'>Kommentare</div>
             <hr className='neon-orange' />
+
             {relatedComments.map(comment => (
                 <div key={comment.id} className="comment">
                     <div className="comment-header">
@@ -70,7 +75,6 @@ export default function NewsArticle() {
                             })
                         }}
                     />
-                    <hr className="neon-orange" />
                 </div>
             ))}
         </div>
