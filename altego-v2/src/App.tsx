@@ -62,8 +62,9 @@ function App() {
           </div>
         </div>
         <div className="layout-footer">
-          {" "}
+          Impressum | Datenschutz | Jobs | Kontakt
           <NeonSwitcher />
+          Copyright © EGOSOFT 1990-{new Date().getFullYear()}
         </div>
       </div>
     </BrowserRouter>
