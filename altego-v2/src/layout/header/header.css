@@ -67,7 +67,7 @@
   margin-right: 10px;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1200px) {
   .top-right-deco,
   .bottom-left-deco {
     display: none;

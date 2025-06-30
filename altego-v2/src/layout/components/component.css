@@ -89,7 +89,7 @@
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1200px) {
   .articel-img, .articel-img-big {
     width: 100%;
   }
