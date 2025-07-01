@@ -3,7 +3,7 @@ import FeatureBanner from "../../layout/components/FeatureBanner";
 const X1Start = () => {
     return (
         <div>
-            <div className='articel-header'>X1</div>
+            <div className='articel-header'>X: Beyond The Frontier</div>
             <hr className='neon-orange' />
             <img src="/animation/x4-steam2023-1.gif" alt="X-Series" style={{ width: "100%" }} />
 
