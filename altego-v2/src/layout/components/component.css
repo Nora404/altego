@@ -292,3 +292,46 @@
   color: var(--led-color-base);
 }
 
+.neon-border-text {
+    color: white;
+    font-size: 1.5rem;
+    text-shadow:
+      /* Neon */
+      0 0 2px var(--neon),
+      0 0 4px var(--neon),
+      /* Übergang zu Schwarz */
+      0 0 8px rgba(0, 0, 0, 0.6),
+      0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature-text {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.feature-banner {
+  position: relative;
+  display: flex;
+  place-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+/* Pseudo-Element mit halbtransparentem Bild */
+.feature-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: var(--bg-image) center/cover no-repeat;
+  opacity: 0.4;       
+  z-index: -1;          
+}

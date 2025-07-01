@@ -41,6 +41,15 @@ const Home = () => {
                 <hr className="neon-orange" />
                 <img src="/images/x1.png" style={{ width: "100%" }} alt="x1" />
                 <p><em>X: Beyond The Frontier</em> ist der erste Teil der X-Reihe von Egosoft. Kyle Brennan strandet mit einem experimentellen Shuttle in einem unbekannten Teil des Universums, der über alte Sprungtore verbunden ist. Dort gerät er in Schulden bei einem Alien und wird von Agenten verfolgt, die ein Geheimnis wahren wollen: Ihre Rasse stammt von Menschen ab, die einst vor den Angriffen der von ihnen selbst geschaffenen Terraformer geflohen sind.</p>
+                <div>
+                    <strong>Weitere Spiele und DLCs:</strong>
+                    <ul>
+                        <li>X-Tension</li>
+                        <li>X-Gold</li>
+                        <li>X-Rebirth</li>
+                        <li>X-Rebirth VR</li>
+                    </ul>
+                </div>
                 <div className="flex-row-end">
                     <Button to="/games/x1">mehr erfahren</Button>
                 </div>
@@ -61,6 +70,14 @@ const Home = () => {
                 <hr className="neon-orange" />
                 <img src="/images/x3.png" style={{ width: "100%" }} alt="x1" />
                 <p><em>X&sup3;: Reunion</em> knüpft an <em>X²: Die Bedrohung</em> an und erweitert das Universum um eine neue Story, neue Schiffe und ein deutlich komplexeres Gameplay. NPCs bauen eigene Fabriken, handeln frei und führen Kriege, die spürbare Auswirkungen auf das gesamte Universum haben. Die Geschichte dreht sich um eine verstreute argonische Flotte, ständige Angriffe der Khaak und das plötzliche Auftauchen eines neuen Feindes – verbunden mit einem geheimnisvollen Schiff, dem Yaki-Piratenclan und einer uralten Maschine.</p>
+                <div>
+                    <strong>Weitere Spiele und DLCs:</strong>
+                    <ul>
+                        <li>X3-Terran Conflict</li>
+                        <li>X3-Albion Prelude</li>
+                        <li>X3-Farnham's Legacy</li>
+                    </ul>
+                </div>
                 <div className="flex-row-end">
                     <Button to="/games/x3">mehr erfahren</Button>
                 </div>
@@ -71,6 +88,15 @@ const Home = () => {
                 <hr className="neon-orange" />
                 <img src="/images/x4.png" style={{ width: "100%" }} alt="x1" />
                 <p><em>X<sup>4</sup>: Foundations</em> führt die Stärken der Serie konsequent fort und erweitert sie um entscheidende Neuerungen. Der nahtlose Wechsel zwischen Schiffen, ein flexibler modularer Stationsbau und eine vollständig simulierte Wirtschaft bilden das Herz des Spiels. Ob als Pirat, Händler, Flottenkommandant oder Stationsbetreiber – in X<sup>4</sup> hat der Spieler die völlige Freiheit, seinen Weg zu wählen und das Universum nach eigenen Vorstellungen zu formen.</p>
+                <div>
+                    <strong>Weitere Spiele und DLCs:</strong>
+                    <ul>
+                        <li>X4-Hyperion</li>
+                        <li>X4-Timelines</li>
+                        <li>X4-Gezeiten der Habgier</li>
+                        <li>X4-Wiege der Menschheit</li>
+                    </ul>
+                </div>
                 <div className="flex-row-end">
                     <Button to="/games/x4">mehr erfahren</Button>
                 </div>

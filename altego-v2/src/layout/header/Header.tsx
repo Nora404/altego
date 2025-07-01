@@ -11,7 +11,7 @@ const Header = () => {
       <div className="top-right-deco">DE - Login - Register</div>
 
       <div className="content">
-        <img src="ui/x4-logo_200px.png" className="logo" />
+        <img src="ui/x4-logo.png" className="logo" />
         <img src="ui/egosoft.gif" className="egosoft-logo" />
       </div>
 
