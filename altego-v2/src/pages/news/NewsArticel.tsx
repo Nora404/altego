@@ -24,7 +24,7 @@ export default function NewsArticle() {
     return (
         <div>
             <div className='articel-header'>{post.title}</div>
-            <hr className='neon-orange' />
+            <hr className='neon-glow-v' />
             <div className='flex-row-top'>
                 <img src={post.img} alt={post.title} className='articel-img-big' />
                 <div className='only-desktop' style={{ marginTop: "1rem" }}>{post.shortText}</div>
@@ -32,7 +32,7 @@ export default function NewsArticle() {
             <div className='only-mobile' style={{ marginBottom: "1rem" }}>{post.shortText}</div>
             <div dangerouslySetInnerHTML={{ __html: sanitizedHTML }} />
 
-            <hr className='neon-orange spaceY' />
+            <hr className='neon-glow-v spaceY' />
 
             <div className="toggleRowToColumn">
                 <div>
@@ -47,7 +47,7 @@ export default function NewsArticle() {
 
             <p className='spaceY' style={{ color: "transparent" }}>.</p>
             <div className='articel-header'>Kommentare</div>
-            <hr className='neon-orange' />
+            <hr className='neon-glow-v' />
 
             {relatedComments.length === 0 && (
                 <div style={{ marginTop: "1rem" }}>Keine Kommentare vorhanden.</div>)}

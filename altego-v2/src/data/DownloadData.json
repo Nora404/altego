@@ -1,0 +1,32 @@
+[
+    {
+        "id": "x1-3.3-3.4",
+        "date": "2017-12-07",
+        "game": "X1",
+        "title": "X: Beyond the Frontier Update to 2.3",
+        "type": "patch",
+        "size": "10.2 MB",
+        "description": "Hinzugefügt: Randloser Fenstermodus, QHD‑Auflösung; Performance‑Verbesserungen in belebten Sektoren.",
+        "url": " "
+    },
+    {
+        "id": "x1-3.0-3.3",
+        "date": "2017-04-21",
+        "game": "X1",
+        "title": "X: Beyond the Frontier Update to 2.2",
+        "type": "patch",
+        "size": "19.1 MB",
+        "description": "Unterstützung für Controller, Lokalisierung, diverse Crash‑Fixes und UI‑Fehlerbehebungen.",
+        "url": " "
+    },
+    {
+        "id": "x1-2.0-3.0",
+        "date": "2010-10-08",
+        "game": "X1",
+        "title": "X: Beyond the Frontier Demo (non-playable)",
+        "type": "demo",
+        "size": "86.6 MB",
+        "description": "Neue Mission „Balance of Power“, Dead‑is‑Dead Modus (Steam), Belohnung für Operation Final Fury.",
+        "url": " "
+    }
+]

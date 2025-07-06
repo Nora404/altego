@@ -4,7 +4,7 @@ const Archiv = () => {
     <div>
       <h2>Archiv</h2>
       <p>Der Inhalt dieser Sektion ist noch nicht fertiggestellt.</p>
-      <hr className="neon-orange" />
+      <hr className="neon-glow-v" />
 
       Hier teste ich nur ein paar sachen!
       <div>
