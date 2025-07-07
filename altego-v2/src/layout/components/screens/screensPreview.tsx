@@ -1,3 +1,5 @@
+// TODO - In echt müssen die Bilder dynamisch geladen werden!
+
 const ScreensPreview = () => {
     return (
         <div className="toggleRowToColumn">
