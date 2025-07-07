@@ -2,6 +2,7 @@ import FeatureBanner from "../../layout/components/FeatureBanner";
 import data from "../../Data/DownloadData.json";
 import DownLoadListPreview from "../../layout/components/download/DownLoadListPreview";
 import type { DownLoadArticel } from "../../layout/components/download/DownLoadList";
+import ScreensPreview from "../../layout/components/screens/screensPreview";
 
 const X1Start = () => {
     const downloadData: DownLoadArticel[] = data.filter((item) => item.game === "X1");
@@ -39,7 +40,8 @@ const X1Start = () => {
             <div className='articel-header'>Media und Community</div>
             <hr className='neon-glow-v' />
             <div className="spaceY">
-                blabla
+                <strong>Neuste Screenshots</strong><br />
+                <ScreensPreview />
                 <div className="spaceY" style={{ color: "transparent" }}>.</div>
             </div>
 
@@ -115,7 +117,7 @@ const X1Start = () => {
             </div>
             <div className="spaceY" style={{ color: "transparent" }}>.</div>
 
-            <div className='articel-header'>Download</div>
+            <div className='articel-header'>Neuste Downloads</div>
             <hr className='neon-glow-v' />
             <DownLoadListPreview data={downloadData} />
             <div className="spaceY" style={{ color: "transparent" }}>.</div>
