@@ -306,6 +306,19 @@
   z-index: -1;          
 }
 
+.screen-img-big {
+  width: 26%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.screen-img-small {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 1200px) {
   .articel-img, .articel-img-big {
     width: 100%;
@@ -320,5 +333,11 @@
   }
   .feature-banner{
    height: auto; 
+  }
+  .screen-img-big {
+    width: 100%;
+  }
+  .screen-img-small {
+    display: none;
   }
 }

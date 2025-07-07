@@ -16,7 +16,7 @@ const DownLoadListPreview: React.FC<DownLoadListPreviewProps> = ({ data }) => {
                     <div className="flex-row-top">
                         <div className="articel-preview-title">{title}</div>
                         <div className="articel-button">
-                            <Button to={`/download/${id}`}>zum Download</Button></div>
+                            <Button to={`/download/${id}`}>Download</Button></div>
                     </div>
                 </div>
             ))}
