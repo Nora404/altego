@@ -1,15 +1,17 @@
 // HologramPanel.tsx
-import { useState, type ReactNode } from "react";
 import ChevronBtn from "./ChevronBtn";
 import ToDownHologram from "../components/ToTopHologram";
 
-interface HologramPanelProps {
+type HologramPanelProps = {
   title: string;
-  children: ReactNode;
-  panelWidth?: number | string;
+  panelWidth?: number;
   chevron?: boolean;
   className?: string;
-}
+  open: boolean;
+  setOpenPanel: () => void;
+  closeAll: () => void;
+  children: (close: () => void) => React.ReactNode;
+};
 
 export default function HologramPanel({
   title,
@@ -17,14 +19,11 @@ export default function HologramPanel({
   panelWidth = 150,
   chevron = true,
   className = "",
-}: Readonly<
-  HologramPanelProps & {
-    children: (close: () => void) => React.ReactNode;
-  }
->) {
-  const [open, setOpen] = useState(false);
-
-  const closePanel = () => setOpen(false);
+  open,
+  setOpenPanel,
+  closeAll,
+}: Readonly<HologramPanelProps>) {
+  const closePanel = () => closeAll();
 
   return (
     <div
@@ -35,7 +34,7 @@ export default function HologramPanel({
     >
       <ChevronBtn
         title={title}
-        onClick={() => setOpen((o) => !o)}
+        onClick={setOpenPanel}
         chevron={chevron}
         open={open}
       />
