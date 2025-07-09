@@ -17,8 +17,14 @@ export default function HologramPanel({
   panelWidth = 150,
   chevron = true,
   className = "",
-}: Readonly<HologramPanelProps>) {
+}: Readonly<
+  HologramPanelProps & {
+    children: (close: () => void) => React.ReactNode;
+  }
+>) {
   const [open, setOpen] = useState(false);
+
+  const closePanel = () => setOpen(false);
 
   return (
     <div
@@ -34,9 +40,7 @@ export default function HologramPanel({
         open={open}
       />
 
-      <ToDownHologram open={open}>
-        {children}
-      </ToDownHologram>
+      <ToDownHologram open={open}>{children(closePanel)}</ToDownHologram>
     </div>
   );
 }
