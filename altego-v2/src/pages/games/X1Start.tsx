@@ -1,5 +1,5 @@
 import FeatureBanner from "../../layout/components/FeatureBanner";
-import data from "../../Data/DownloadData.json";
+import data from "../../data/DownloadData.json";
 import DownLoadListPreview from "../../layout/components/download/DownLoadListPreview";
 import type { DownLoadArticel } from "../../layout/components/download/DownLoadList";
 import ScreensPreview from "../../layout/components/screens/screensPreview";
