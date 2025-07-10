@@ -2,13 +2,13 @@
 import DOMPurify from 'dompurify';
 import type { NewsArticel } from '../../layout/components/articel/NewsArticelList';
 import { useParams } from 'react-router-dom';
-import data from '../../Data/NewsData.json';
-import comments from '../../Data/CommentsData.json';
+import newsData from '../../data/NewsData.json';
+import comments from '../../data/CommentsData.json';
 import Button from '../../layout/components/Button';
 
 export default function NewsArticle() {
     const { id } = useParams();
-    const post: NewsArticel | undefined = data.find((p) => p.id === id);
+    const post: NewsArticel | undefined = newsData.find((p) => p.id === id);
 
     if (!post) return <div>Artikel nicht gefunden</div>;
 

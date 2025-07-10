@@ -1,4 +1,4 @@
-import data from "../../../Data/NewsData.json";
+import data from "../../../data/NewsData.json";
 import NewsArticelList from "../../../layout/components/articel/NewsArticelList";
 
 const News = () => {
