@@ -1,6 +1,5 @@
 // TVNoise.tsx
 import React from "react";
-import "./tv.css";
 
 interface TVNoiseProps {
   src: string;

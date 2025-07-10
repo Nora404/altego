@@ -1,5 +1,4 @@
 // Header.tsx
-import "./header.css";
 import TVNoise from "./TVNoise";
 
 const Header = () => {

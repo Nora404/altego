@@ -1,9 +1,9 @@
-@import "./layout/footer/footer.css";
-@import "./layout/header/header.css";
-@import "./layout/main/content.css";
-@import "./layout/sidebars/sidebars.css";
-@import "./layout/components/component.css";
-@import "./layout/navigation/navigation.css";
+@import "./styles/header.css";
+@import "./styles/content.css";
+@import "./styles/sidebars.css";
+@import "./styles/component.css";
+@import "./styles/navigation.css";
+@import "./styles/tv.css";
 
 :root {
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
