@@ -1,0 +1,343 @@
+.neon-glow-v{
+    background: linear-gradient(
+    to top,
+    rgba(var(--neon-rgb), 1),
+    rgba(var(--neon-rgb), 0.7),
+    rgba(var(--neon-rgb), 0.3),
+    transparent
+  );
+
+  box-shadow:
+    0 0 12px rgba(var(--neon-rgb), 0.9),
+    0 0 24px rgba(var(--neon-rgb), 0.6),
+    0 0 36px rgba(var(--neon-rgb), 0.3);
+}
+
+.outlined-text {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+  font-weight: bold;
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.4); /* 25 % Schwarz */
+}
+
+/* ----------- ARTICEL ----------- */
+
+.articel {
+  margin-bottom: 2rem;
+}
+
+.articel-header {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  background-color: black;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.articel-img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.articel-img-big {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: 0 1rem 1rem 0;
+}
+
+.articel-content {
+  padding-left: 1rem;
+}
+
+.articel-preview-date {
+  font-size: 0.8rem;
+  color: #888;
+  background-color: black;
+  padding: 0.2rem;
+}
+.articel-preview-title {
+  margin: 0.2rem 0 1rem 0.2rem;
+}
+.articel-button {
+  min-width: 160px;
+  margin: 0.6rem 0 0.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* ----------- COMMENT ----------- */
+
+.comment {
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.comment-text {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: calc(40px + 0.5rem);
+  white-space: pre-wrap;
+}
+
+
+/* ----------- HOLO ----------- */
+
+.hologram-bg {
+  color: #ffffff;
+  background-color: rgba(45, 89, 119, 0.75);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(51, 140, 198, 0.5) 0 4px,
+    transparent 4px 8px
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    #000 calc(100% - 10px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    #000 10px,
+    #000 calc(100% - 10px),
+    transparent 100%
+  );
+  animation: vShift 15s linear infinite;
+               
+  max-height: 0;                       
+  transition: max-height 0.35s ease;
+}
+
+.hologram-bg.is-open {
+  max-height: 90vh;                    
+}
+
+
+/* Position Down (öffnet nach unten) */
+.position-down--floating {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.position-down--inline {
+  position: static;
+}
+
+/* Position Up (öffnet nach oben) */
+.position-top--floating {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.position-top--inline {
+  position: static;
+}
+
+@keyframes vShift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100px;
+  }
+}
+
+.led-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgb(77, 77, 77);
+  cursor: pointer;
+  /* Damit das Innere wie eine Kugel wirkt, nutzen wir ein radial-gradient */
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.2) 15%,
+    rgba(0, 0, 0, 0.1) 75%,
+    transparent 100%
+  );
+  /* Grund‐Farbe einkleiden wir mittels color, die in den Farb‐Klassen gesetzt wird */
+  color: currentColor;
+  position: relative;
+  box-shadow:
+    /* äußeres Glow */
+    /* 0 0 6px currentColor, */
+    /* leichter Nach‐unten‐Schatten */ 0
+      2px 4px rgba(0, 0, 0, 0.4),
+    /* innerer Schatten, um eine tiefe Kuppel anzudeuten */ inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    inset 0 2px 3px rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Beim Hover ein bisschen aufleuchten und herauskommen lassen */
+.led-button:hover {
+  transform: scale(1.2);
+  box-shadow:
+    /* stärkerer Glow beim Hover */ 0 0 10px currentColor,
+    0 2px 6px rgba(0, 0, 0, 0.5), inset 0 -2px 4px rgba(0, 0, 0, 0.6),
+    inset 0 2px 3px rgba(255, 255, 255, 0.3);
+}
+
+.led-blue {
+  --led-color-base: rgb(110, 210, 255);
+  /* Grundfarbe als Farbverlauf‐Layer unten drunter: */
+  background-image:
+    /* Farbverlauf von heller Mitte zu etwas dunklerem Rand */ radial-gradient(
+      circle at 50% 50%,
+      rgba(110, 210, 255, 1) 30%,
+      rgba(20, 100, 140, 1) 100%
+    ),
+    /* Glas‐Highlight oben links */
+      radial-gradient(
+        circle at 30% 30%,
+        rgba(255, 255, 255, 0.6) 0%,
+        transparent 50%
+      );
+  color: var(--led-color-base);
+}
+
+/* 2) Orange */
+.led-orange {
+  --led-color-base: rgb(255, 165, 0);
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 165, 0, 1) 30%,
+      rgba(140, 80, 0, 1) 100%
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.6) 0%,
+      transparent 50%
+    );
+  color: var(--led-color-base);
+}
+
+/* 3) Weiß */
+.led-white {
+  --led-color-base: rgb(255, 255, 255);
+  background-image: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(180, 180, 180, 1) 100%
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.75) 0%,
+      transparent 50%
+    );
+  color: var(--led-color-base);
+}
+
+.neon-border-text {
+    color: white;
+    font-size: 1.5rem;
+    text-shadow:
+      /* Neon */
+      0 0 2px var(--neon),
+      0 0 4px var(--neon),
+      /* Übergang zu Schwarz */
+      0 0 8px rgba(0, 0, 0, 0.6),
+      0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+.feature-text {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.feature-banner {
+  position: relative;
+  display: flex;
+  place-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+/* Pseudo-Element mit halbtransparentem Bild */
+.feature-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: var(--bg-image) center/cover no-repeat;
+  opacity: 0.4;       
+  z-index: -1;          
+}
+
+.screen-img-big {
+  width: 26%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.screen-img-small {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .articel-img, .articel-img-big {
+    width: 100%;
+  }
+  
+  .articel-header {
+    padding: 0.3rem 1rem;
+    border-radius: 15px 15px 0 0;
+  }
+  .articel-content {
+    padding-left: 0;
+  }
+  .feature-banner{
+   height: auto; 
+  }
+  .screen-img-big {
+    width: 100%;
+  }
+  .screen-img-small {
+    display: none;
+  }
+}

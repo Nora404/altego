@@ -1,0 +1,117 @@
+.content-grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: 16px 1fr 16px;
+  grid-template-rows: 16px 1fr 16px;
+  width: 100%;
+  height: calc(100% - 20px);
+  margin: 10px 0 ;
+}
+
+.content {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 24px;
+  border-radius: 4px;
+}
+
+/* 🟦 Ränder */
+.edge-top {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: var(--background-color);
+  position: relative;
+} .edge-top::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px; 
+  width: 100%;
+  background: linear-gradient(to right, var(--neon), transparent);
+  pointer-events: none;
+}
+
+.edge-bottom {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: var(--background-color);
+  position: relative;
+} .edge-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px; 
+  width: 100%;
+  background: linear-gradient(to left, var(--neon), transparent);
+  pointer-events: none;
+}
+
+.edge-left {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: var(--background-color);
+  position: relative;
+} .edge-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; 
+  width: 2px;
+  background: linear-gradient(to bottom, var(--neon), transparent);
+  pointer-events: none;
+}
+
+.edge-right {
+  grid-column: 3;
+  grid-row: 2;
+  background-color: var(--background-color);
+  position: relative;
+} .edge-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%; 
+  width: 2px;
+  background: linear-gradient(to top, var(--neon), transparent);
+  pointer-events: none;
+}
+
+/* 🟨 Ecken */
+.corner.top-left {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--background-color);
+  border-top: 2px solid var(--neon);
+  border-left: 2px solid var(--neon);
+}
+
+.corner.top-right {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: var(--background-color);
+}
+
+.corner.bottom-left {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: var(--background-color);
+}
+
+.corner.bottom-right {
+  grid-column: 3;
+  grid-row: 3;
+  background-color: var(--background-color);
+    border-bottom: 2px solid var(--neon);
+  border-right: 2px solid var(--neon);
+}
+
+
+@media screen and (max-width: 1200px) {
+.content {
+  padding: 5px;
+}
+}

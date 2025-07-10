@@ -1,0 +1,81 @@
+.custom-header {
+  position: relative;
+  height: var(--header-h);
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-bar,
+.bottom-bar {
+  height: 15px;
+  width: 100%;
+  background-color: var(--background-color);
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.top-bar {
+  top: 0;
+}
+
+.bottom-bar {
+  bottom: 0;
+}
+
+.top-right-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 35px;
+  background-color: var(--background-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20px 100%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: var(--neon);
+}
+
+.bottom-left-deco {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 35px;
+  background-color: var(--background-color);
+  clip-path: polygon(0 0, 230px 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.logo {
+  position: absolute;
+  height: 100%;
+  z-index: 3;
+  top: 0;
+  margin-left: 10px;
+}
+
+.egosoft-logo {
+  position: absolute;
+  height: 15%;
+  z-index: 3;
+  right: 0;
+  bottom: 25px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .top-right-deco,
+  .bottom-left-deco {
+    display: none;
+  }
+  .logo {
+    margin-left: -15px;
+  }
+  .bottom-bar{
+    height: 5px;
+  }
+}

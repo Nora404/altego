@@ -1,0 +1,85 @@
+.chevron-icon {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  transform: rotate(180deg);
+}
+
+/* Drehen beim Öffnen */
+.chevron-icon.open {
+  transform: rotate(270deg);
+}
+
+/* Sichtbarer Haupt-Chevron */
+.chevron-main {
+  stroke: var(--neon);
+}
+
+/* Zweiter Chevron fährt in den ersten und wird unsichtbar */
+.chevron-fade {
+  stroke: var(--neon);
+  transform: translateX(-6px);
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+/* Beim Öffnen: nach rechts rein, dann unsichtbar */
+.chevron-icon.open .chevron-fade {
+  transform: translateX(0px);
+  opacity: 0;
+}
+
+.hologram-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+.navigation-entries {
+  display: block; 
+  padding: 0.1rem 1rem;
+  text-align: left;
+  text-decoration: none;
+  margin: 3px 15px;
+  border: 1px solid transparent;
+  transition: all 0.5s linear;
+}
+
+.navigation-entries:hover {
+  background-color: rgba(27, 55, 74, 0.8);
+  border: 1px solid black;
+}
+
+.neon-switcher {
+  display: inline-flex;
+  gap: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  justify-items: flex-end;
+}
+
+.mobile-entries {
+  display: block; 
+  background-color: rgba(27, 55, 74, 0.8);
+  border: 1px solid black;
+  margin: 10px 20px;
+  padding: 0.1rem 1rem;
+  font-size: larger;
+  text-align: left;
+  text-decoration: none;
+}
+
+.mobile-subentries {
+  display: block;
+  background-color: rgba(29, 73, 102, 0.8);
+  border: 1px solid black;
+  margin: 10px 40px;
+  padding: 0.1rem 1rem;
+  font-size: larger;
+  text-align: left;
+  text-decoration: none;
+}
+
+.mobile-menu-scrollbox {
+  overflow-y: auto;
+  /* height: 90vh; */ /*Notlösung*/
+}
