@@ -1,4 +1,4 @@
-import data from "../../Data/NewsData.json";
+import data from "../../data/NewsData.json";
 import NewsArticelListPreview from "../../layout/components/articel/NewsArticelListPreview";
 import Button from "../../layout/components/Button";
 
