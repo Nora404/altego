@@ -29,6 +29,7 @@
     "vite": "^6.3.5"
   },
   "compilerOptions": {
+    "strict": false,
     "noEmitOnError": false
   }
 }
